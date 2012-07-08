@@ -27,12 +27,12 @@
 	<parent>
 		<groupId>com.celements</groupId>
 		<artifactId>base-pom</artifactId>
-		<version>2.0</version>
+		<version>2.4</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.celements</groupId>
 	<artifactId>celementsweb</artifactId>
-	<version>2.0</version>
+	<version>2.1</version>
 	<packaging>pom</packaging>
 	<description>Celements Web Main POM</description>
 	<scm>
