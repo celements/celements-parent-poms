@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
-  <version>2.6</version>
+  <version>2.7</version>
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
@@ -291,11 +291,13 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
+<!-- 
     <repository>
       <id>www2.ph.ed.ac.uk-releases</id>
       <url>http://www2.ph.ed.ac.uk/maven2</url>
     </repository>
-    <repository>
+ -->
+     <repository>
       <id>jboss-thirdparty-releases</id>
       <name>JBoss Thirdparty Releases</name>
       <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
