@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
-    <connection>scm:git:git@github.com:celements/parent-poms.git</connection>
+    <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
   </scm>
