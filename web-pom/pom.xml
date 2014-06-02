@@ -22,8 +22,7 @@
  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<parent>
 		<groupId>com.celements</groupId>
 		<artifactId>base-pom</artifactId>
@@ -32,14 +31,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.celements</groupId>
 	<artifactId>celementsweb</artifactId>
-	<version>2.5-SNAPSHOT</version>
+	<version>2.5</version>
 	<packaging>pom</packaging>
 	<description>Celements Web Main POM</description>
   <scm>
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
-    <tag>HEAD</tag>
+    <tag>celementsweb-2.5</tag>
   </scm>
   <licenses>
     <license>
@@ -53,10 +52,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!--  default properties, can be overriden in profile -->
         <catalina.home>${env.CATALINA_HOME}</catalina.home>
-		<xwiki.cfg.xwiki.store.migration.databases></xwiki.cfg.xwiki.store.migration.databases>
+		<xwiki.cfg.xwiki.store.migration.databases />
 		<xwiki.cfg.xwiki.virtual>0</xwiki.cfg.xwiki.virtual>
 		<xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
-		<xwiki.cfg.xwiki.db.prefix.celementsweb></xwiki.cfg.xwiki.db.prefix.celementsweb>
+		<xwiki.cfg.xwiki.db.prefix.celementsweb />
 		<xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
 		<hibernate.cfg.xml.connection.url>jdbc:mysql://localhost/${xwiki.cfg.xwiki.db.prefix}main?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''</hibernate.cfg.xml.connection.url>
 		<hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
@@ -66,10 +65,10 @@
 		<hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
 		<hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
 		<hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>		
-		<hibernate.cfg.xml.dbtype_extension></hibernate.cfg.xml.dbtype_extension>
+		<hibernate.cfg.xml.dbtype_extension />
     <fop-config.xml.fonts.directory>${catalina.home}/ROOT/WEB-INF/fonts</fop-config.xml.fonts.directory>
     <log4j.properties.appender.file.File>${catalina.home}/logs/celementsweb.log</log4j.properties.appender.file.File>
-    <log4j.properties.logger.config></log4j.properties.logger.config>
+    <log4j.properties.logger.config />
 	</properties>
 	<dependencies>
 		<!-- Add here all your dependencies -->
