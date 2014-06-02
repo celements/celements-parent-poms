@@ -35,9 +35,12 @@
 	<version>2.5-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<description>Celements Web Main POM</description>
-	<scm>
-		<developerConnection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</developerConnection>
-	</scm>
+  <scm>
+    <connection>scm:git:git://github.com/celements/parent-poms</connection>
+    <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
+    <url>https://github.com/celements/parent-poms</url>
+    <tag>HEAD</tag>
+  </scm>
   <licenses>
     <license>
       <name>LGPL 2.1</name>

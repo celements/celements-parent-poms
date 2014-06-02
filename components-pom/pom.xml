@@ -13,8 +13,10 @@
   <packaging>pom</packaging>
   <description>Celements Main POM</description>
   <scm>
-    <developerConnection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</developerConnection>
-    <connection>scm:svn:svn+ssh://dev1.synventis.com:10022/svn/com_celements/trunk</connection>
+    <connection>scm:git:git://github.com/celements/parent-poms</connection>
+    <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
+    <url>https://github.com/celements/parent-poms</url>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <!--
