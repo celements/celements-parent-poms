@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
-  <version>2.9-SNAPSHOT</version>
+  <version>2.9</version>
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
