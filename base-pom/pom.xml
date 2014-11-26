@@ -58,6 +58,16 @@
         <artifactId>xwiki-core-shared-tests</artifactId>
         <version>2.7.2</version>
       </dependency>
+	    <dependency>
+	      <groupId>org.xwiki.platform</groupId>
+	      <artifactId>xwiki-core-captcha</artifactId>
+	      <version>2.7.2</version>
+	    </dependency>
+			<dependency>
+			  <groupId>commons-net</groupId>
+			  <artifactId>commons-net</artifactId>
+			  <version>3.3</version>
+			</dependency>
       <dependency>
 	      <groupId>com.google.guava</groupId>
 	      <artifactId>guava</artifactId>
