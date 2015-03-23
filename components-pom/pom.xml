@@ -125,9 +125,9 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>1.8-SNAPSHOT</version>
+      <version>1.8</version>
       <scope>test</scope>
-    </dependency>          
+    </dependency>
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
