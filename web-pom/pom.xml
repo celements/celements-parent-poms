@@ -120,8 +120,7 @@
               <includes>
                 <include>**/*.xml</include>
                 <include>**/*.cfg</include>
-                <include>xwiki.properties</include>
-                <include>classes/log4j.properties</include>
+                <include>**/*.properties</include>
               </includes>
             </resource>
             <resource>
@@ -131,8 +130,7 @@
               <excludes>
                 <exclude>**/*.xml</exclude>
                 <exclude>**/*.cfg</exclude>
-                <exclude>xwiki.properties</exclude>
-                <exclude>classes/log4j.properties</exclude>
+                <exclude>**/*.properties</exclude>
               </excludes>
             </resource>
           </webResources>
