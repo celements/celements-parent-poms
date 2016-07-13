@@ -129,7 +129,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>1.12</version>
+      <version>1.13-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
