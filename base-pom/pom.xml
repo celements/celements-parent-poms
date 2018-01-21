@@ -44,8 +44,8 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-core</artifactId>
+        <groupId>com.celements</groupId>
+        <artifactId>xwiki-core-CEL</artifactId>
         <version>2.7.2</version>
       </dependency>
 	    <dependency>
@@ -132,7 +132,7 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>2.31.0</version>
-    </dependency>  
+    </dependency>
       <dependency>
         <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-core-lgpl</artifactId>
@@ -339,7 +339,7 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
-<!-- 
+<!--
     <repository>
       <id>www2.ph.ed.ac.uk-releases</id>
       <url>http://www2.ph.ed.ac.uk/maven2</url>
@@ -417,6 +417,6 @@
       <id>ssh-release-repository</id>
       <url>scpexe://maven.celements.ch/var/www-celements/releases</url>
       <uniqueVersion>true</uniqueVersion>
-    </repository>       
+    </repository>
   </distributionManagement>
 </project>

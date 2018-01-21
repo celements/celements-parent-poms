@@ -50,8 +50,8 @@
   <dependencies>
     <!-- Add here all your dependencies -->
     <dependency>
-      <groupId>com.xpn.xwiki.platform</groupId>
-      <artifactId>xwiki-core</artifactId>
+      <groupId>com.celements</groupId>
+      <artifactId>celelements-xwiki-core</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
