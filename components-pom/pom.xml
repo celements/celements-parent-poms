@@ -55,15 +55,165 @@
       <version>1.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+
+    <!-- Other XWiki modules -->
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-configuration-default</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-observation-local</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-observation-remote</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-velocity</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-context</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-model</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-bridge</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-rendering-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-rendering-xwiki</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-rendering-macro-wikibridge</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-component-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-component-multi</artifactId>
+      <!-- Only required at runtime (ie in the distribution) -->
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-query-manager</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-mailsender</artifactId>
       <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>radeox</groupId>
+      <artifactId>radeox</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Storage -->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <version>3.2.6.ga</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- Authentication -->
+    <dependency>
+      <groupId>securityfilter</groupId>
+      <artifactId>securityfilter</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- TODO: We should drop ECS -->
+    <dependency>
+      <groupId>ecs</groupId>
+      <artifactId>ecs</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.xmlrpc</groupId>
+      <artifactId>xmlrpc-server</artifactId>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <artifactId>junit</artifactId>
+          <groupId>junit</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- RSS Feed processing -->
+    <dependency>
+      <groupId>rome</groupId>
+      <artifactId>rome</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+      <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
+      <exclusions>
+        <exclusion>
+          <groupId>jdom</groupId>
+          <artifactId>jdom</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>rome</groupId>
+      <artifactId>rome-fetcher</artifactId>
+      <version>1.0</version>
+      <scope>provided</scope>
+      <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
+      <exclusions>
+        <exclusion>
+          <groupId>jdom</groupId>
+          <artifactId>jdom</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- The JRCS JARS are are in our repo till we get them published on the central repository.
+         JRCS home page: http://www.suigeneris.org/kb/display/jrcs/JRCS+Home -->
+    <dependency>
+      <groupId>org.suigeneris</groupId>
+      <artifactId>jrcs.diff</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.suigeneris</groupId>
+      <artifactId>jrcs.rcs</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+        <groupId>javax.validation</groupId>
+        <artifactId>validation-api</artifactId>
+        <version>1.1.0.Final</version>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
@@ -104,6 +254,31 @@
        <groupId>commons-logging</groupId>
        <artifactId>commons-logging-api</artifactId>
      </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-codec</groupId>
+      <artifactId>commons-codec</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-fileupload</groupId>
+      <artifactId>commons-fileupload</artifactId>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
