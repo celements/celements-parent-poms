@@ -46,13 +46,76 @@
       <dependency>
         <groupId>com.xpn.xwiki.platform</groupId>
         <artifactId>xwiki-core</artifactId>
+        <version>2.7.2-CEL</version>
+      </dependency>
+
+      <!-- Other XWiki modules -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-configuration-default</artifactId>
         <version>2.7.2</version>
       </dependency>
-	    <dependency>
-	      <groupId>org.xwiki.platform</groupId>
-	      <artifactId>xwiki-core-component-api</artifactId>
-	      <version>2.7.2</version>
-	    </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-observation-local</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-observation-remote</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-velocity</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-context</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-model</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-bridge</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-api</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-xwiki</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-macro-wikibridge</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-component-api</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-component-multi</artifactId>
+        <version>2.7.2</version>
+        <!-- Only required at runtime (ie in the distribution) -->
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-query-manager</artifactId>
+        <version>2.7.2</version>
+      </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-shared-tests</artifactId>
@@ -63,6 +126,119 @@
 	      <artifactId>xwiki-core-captcha</artifactId>
 	      <version>2.7.2</version>
 	    </dependency>
+
+      <dependency>
+        <groupId>radeox</groupId>
+        <artifactId>radeox</artifactId>
+        <version>1.0-b2</version>
+      </dependency>
+
+      <!-- RSS Feed processing -->
+      <dependency>
+        <groupId>rome</groupId>
+        <artifactId>rome</artifactId>
+        <version>1.0</version>
+        <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
+        <exclusions>
+          <exclusion>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>rome</groupId>
+        <artifactId>rome-fetcher</artifactId>
+        <version>1.0</version>
+        <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
+        <exclusions>
+          <exclusion>
+            <groupId>jdom</groupId>
+            <artifactId>jdom</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- Authentication -->
+      <dependency>
+        <groupId>securityfilter</groupId>
+        <artifactId>securityfilter</artifactId>
+        <version>2.0</version>
+      </dependency>
+
+      <!-- TODO: We should drop ECS -->
+      <dependency>
+        <groupId>ecs</groupId>
+        <artifactId>ecs</artifactId>
+        <version>1.4.2</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.apache.xmlrpc</groupId>
+        <artifactId>xmlrpc-server</artifactId>
+        <version>3.1</version>
+        <exclusions>
+          <exclusion>
+            <artifactId>junit</artifactId>
+            <groupId>junit</groupId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <!-- The JRCS JARS are are in our repo till we get them published on the central repository.
+           JRCS home page: http://www.suigeneris.org/kb/display/jrcs/JRCS+Home -->
+      <dependency>
+        <groupId>org.suigeneris</groupId>
+        <artifactId>jrcs.diff</artifactId>
+        <version>0.4.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.suigeneris</groupId>
+        <artifactId>jrcs.rcs</artifactId>
+        <version>0.4.2</version>
+      </dependency>
+
+      <!-- JTidy hasn't been released for ages (since 2001). A snapshot version exists at
+           http://jtidy.sourceforge.net/snapshots/ but Maven requires non-snapshots in order to
+           allow a release (this is for reproducibility). Thus we've had to upload JTidy into
+           our custom repository -->
+      <dependency>
+        <groupId>jtidy</groupId>
+        <artifactId>jtidy</artifactId>
+        <version>8.0-20060801.131059-3-dev</version>
+        <exclusions>
+          <exclusion>
+            <groupId>xerces</groupId>
+            <artifactId>dom3-xml-apis</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>3.2.1</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>2.0</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.4</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-beanutils</groupId>
+        <artifactId>commons-beanutils</artifactId>
+        <version>1.8.3</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-fileupload</groupId>
+        <artifactId>commons-fileupload</artifactId>
+        <version>1.2.1</version>
+      </dependency>
 			<dependency>
 			  <groupId>commons-net</groupId>
 			  <artifactId>commons-net</artifactId>
@@ -73,6 +249,7 @@
 	      <artifactId>guava</artifactId>
 	      <version>18.0</version>
       </dependency>
+
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-mailsender</artifactId>
@@ -88,6 +265,7 @@
         <artifactId>xwiki-plugin-scheduler</artifactId>
         <version>1.24</version>
       </dependency>
+
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
@@ -132,7 +310,7 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>2.31.0</version>
-    </dependency>  
+    </dependency>
       <dependency>
         <groupId>org.codehaus.jackson</groupId>
         <artifactId>jackson-core-lgpl</artifactId>
@@ -339,7 +517,7 @@
         <enabled>true</enabled>
       </snapshots>
     </repository>
-<!-- 
+<!--
     <repository>
       <id>www2.ph.ed.ac.uk-releases</id>
       <url>http://www2.ph.ed.ac.uk/maven2</url>
@@ -417,6 +595,6 @@
       <id>ssh-release-repository</id>
       <url>scpexe://maven.celements.ch/var/www-celements/releases</url>
       <uniqueVersion>true</uniqueVersion>
-    </repository>       
+    </repository>
   </distributionManagement>
 </project>
