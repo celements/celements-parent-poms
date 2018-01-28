@@ -247,7 +247,8 @@
       <dependency>
 	      <groupId>com.google.guava</groupId>
 	      <artifactId>guava</artifactId>
-	      <version>18.0</version>
+        <!-- see [CELDEV-628] before including 21+ -->
+	      <version>20.0</version>
       </dependency>
 
       <dependency>
