@@ -47,9 +47,11 @@
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
+  
   <dependencies>
-
     <!-- Add here all your dependencies -->
+    
+    <!-- Celements-XWiki -->
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
@@ -57,7 +59,7 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- Other XWiki modules -->
+    <!-- XWiki -->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-configuration-default</artifactId>
@@ -129,9 +131,15 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- XWiki Plugins -->
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-mailsender</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <artifactId>xwiki-plugin-skinx</artifactId>
       <scope>provided</scope>
     </dependency>
 
@@ -220,6 +228,7 @@
       <scope>provided</scope>
     </dependency>
 
+    <!-- Commons -->
     <dependency>
         <groupId>javax.validation</groupId>
         <artifactId>validation-api</artifactId>
@@ -237,11 +246,6 @@
     <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-skinx</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
@@ -294,10 +298,9 @@
       <artifactId>servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-    <!--
-      Make sure we provide a default implementation of slf4j for any test
-      indirectly use it
-    -->
+
+    <!-- Logging -->
+    <!-- Make sure we provide a default implementation of slf4j for any test indirectly use it -->
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
@@ -353,6 +356,7 @@
     </dependency>
 
   </dependencies>
+
    <build>
     <pluginManagement>
       <plugins>
