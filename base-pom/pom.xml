@@ -126,11 +126,11 @@
         <artifactId>xwiki-core-shared-tests</artifactId>
         <version>2.7.2</version>
       </dependency>
-	    <dependency>
-	      <groupId>org.xwiki.platform</groupId>
-	      <artifactId>xwiki-core-captcha</artifactId>
-	      <version>2.7.2</version>
-	    </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-captcha</artifactId>
+        <version>2.7.2</version>
+      </dependency>
 
       <dependency>
         <groupId>radeox</groupId>
@@ -244,16 +244,16 @@
         <artifactId>commons-fileupload</artifactId>
         <version>1.2.1</version>
       </dependency>
-			<dependency>
-			  <groupId>commons-net</groupId>
-			  <artifactId>commons-net</artifactId>
-			  <version>3.3</version>
-			</dependency>
       <dependency>
-	      <groupId>com.google.guava</groupId>
-	      <artifactId>guava</artifactId>
+        <groupId>commons-net</groupId>
+        <artifactId>commons-net</artifactId>
+        <version>3.3</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
         <!-- see [CELDEV-628] before including 21+ -->
-	      <version>20.0</version>
+        <version>20.0</version>
       </dependency>
 
       <dependency>
@@ -387,9 +387,9 @@
           <version>2.8.2</version>
         </plugin>
         <plugin>
-	        <groupId>org.apache.maven.plugins</groupId>
-	        <artifactId>maven-war-plugin</artifactId>
-	        <version>2.6</version>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-war-plugin</artifactId>
+          <version>2.6</version>
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
