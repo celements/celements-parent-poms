@@ -194,6 +194,10 @@
           <groupId>jdom</groupId>
           <artifactId>jdom</artifactId>
         </exclusion>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
       </exclusions>
     </dependency>
 
@@ -237,6 +241,16 @@
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-shared-tests</artifactId>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit-dep</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
@@ -307,6 +321,12 @@
       <artifactId>celements-shared-tests</artifactId>
       <version>1.16</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.easymock</groupId>
