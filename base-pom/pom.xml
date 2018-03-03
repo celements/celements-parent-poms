@@ -57,6 +57,11 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-observation-api</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-observation-local</artifactId>
         <version>2.7.2</version>
       </dependency>
