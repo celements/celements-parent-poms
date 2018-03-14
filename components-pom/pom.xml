@@ -357,7 +357,13 @@
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymockclassextension</artifactId>
-    <scope>test</scope>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-subsystem-migration-manager</artifactId>
+      <version>3.0-SNAPSHOT</version>
+      <scope>test</scope>
     </dependency>
 
   </dependencies>
