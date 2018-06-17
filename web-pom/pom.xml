@@ -60,7 +60,7 @@
 		<hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
 		<hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
 		<hibernate.cfg.xml.connection.driver_class>com.mysql.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
-		<hibernate.cfg.xml.dialect>org.hibernate.dialect.MySQLDialect</hibernate.cfg.xml.dialect>
+		<hibernate.cfg.xml.dialect>com.celements.query.CelMySQLDialect</hibernate.cfg.xml.dialect>
 		<hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
 		<hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
 		<hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>		
