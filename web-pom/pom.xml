@@ -23,16 +23,16 @@
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<parent>
-		<groupId>com.celements</groupId>
-		<artifactId>base-pom</artifactId>
-		<version>3.2</version>
-	</parent>
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>celementsweb</artifactId>
-	<version>3.3-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<description>Celements Web Main POM</description>
+  <parent>
+    <groupId>com.celements</groupId>
+    <artifactId>base-pom</artifactId>
+    <version>3.3-SNAPSHOT</version>
+  </parent>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>celementsweb</artifactId>
+  <version>3.3-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <description>Celements Web Main POM</description>
   <scm>
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
@@ -46,73 +46,73 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
-	<properties>
-		<platform.core.version>1.0</platform.core.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<!--  default properties, can be overriden in profile -->
+  <properties>
+    <platform.core.version>1.0</platform.core.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <!--  default properties, can be overriden in profile -->
         <catalina.home>${env.CATALINA_HOME}</catalina.home>
-		<xwiki.cfg.xwiki.store.migration.databases />
-		<xwiki.cfg.xwiki.virtual>0</xwiki.cfg.xwiki.virtual>
-		<xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
-		<xwiki.cfg.xwiki.db.prefix.celementsweb />
-		<xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
-		<hibernate.cfg.xml.connection.url>jdbc:mysql://localhost/${xwiki.cfg.xwiki.db.prefix}main?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''</hibernate.cfg.xml.connection.url>
-		<hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
-		<hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
-		<hibernate.cfg.xml.connection.driver_class>com.mysql.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
-		<hibernate.cfg.xml.dialect>com.celements.query.CelMySQLDialect</hibernate.cfg.xml.dialect>
-		<hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
-		<hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
-		<hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>		
-		<hibernate.cfg.xml.dbtype_extension />
+    <xwiki.cfg.xwiki.store.migration.databases />
+    <xwiki.cfg.xwiki.virtual>0</xwiki.cfg.xwiki.virtual>
+    <xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
+    <xwiki.cfg.xwiki.db.prefix.celementsweb />
+    <xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
+    <hibernate.cfg.xml.connection.url>jdbc:mysql://localhost/${xwiki.cfg.xwiki.db.prefix}main?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''</hibernate.cfg.xml.connection.url>
+    <hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
+    <hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
+    <hibernate.cfg.xml.connection.driver_class>com.mysql.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
+    <hibernate.cfg.xml.dialect>com.celements.query.CelMySQLDialect</hibernate.cfg.xml.dialect>
+    <hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
+    <hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
+    <hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>
+    <hibernate.cfg.xml.dbtype_extension />
     <fop-config.xml.fonts.directory>${catalina.home}/ROOT/WEB-INF/fonts</fop-config.xml.fonts.directory>
     <log4j.properties.appender.file.File>${catalina.home}/logs/celementsweb.log</log4j.properties.appender.file.File>
     <log4j.properties.logger.config />
-	</properties>
-	<dependencies>
-		<!-- Add here all your dependencies -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<!--
-			Make sure we provide a default implementation of slf4j for any test
-			indirectly use it
-		-->
-		<dependency>
-			<groupId>org.slf4j</groupId>
-			<artifactId>slf4j-log4j12</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+  </properties>
+  <dependencies>
+    <!-- Add here all your dependencies -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <!--
+      Make sure we provide a default implementation of slf4j for any test
+      indirectly use it
+    -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <scope>runtime</scope>
+    </dependency>
                 <dependency>
-	          <groupId>org.slf4j</groupId>
-	          <artifactId>slf4j-api</artifactId>
-	        </dependency>
-    		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<scope>test</scope>
-		</dependency>
-	  <dependency>
-	    <groupId>com.celements</groupId>
-	    <artifactId>celements-shared-tests</artifactId>
-	    <version>1.12</version>
-	    <scope>provided</scope>
-	  </dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<configuration>
-				  <webResources>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </dependency>
+        <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-shared-tests</artifactId>
+      <version>1.12</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <configuration>
+          <webResources>
             <resource>
               <directory>src/main/webapp/WEB-INF</directory>
               <targetPath>WEB-INF</targetPath>
@@ -134,8 +134,8 @@
               </excludes>
             </resource>
           </webResources>
-		</configuration>
-			</plugin>
+    </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -159,22 +159,22 @@
           </execution>
         </executions>
       </plugin>
-		</plugins>
-	</build>
-	<profiles>
-		<profile>
-			<!--
-				to use this profile you always have to specify a second profile e.g.
-				mvn clean install -P selenium, firefox this is the default profile
-			-->
-			<id>selenium</id>
-			<properties>
-				<!--
-					you can override these properties in settings.xml
-				-->
-				<selenium.serverHost>localhost</selenium.serverHost>
-				<selenium.serverPort>4444</selenium.serverPort>
-		<catalina.port>10081</catalina.port>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <!--
+        to use this profile you always have to specify a second profile e.g.
+        mvn clean install -P selenium, firefox this is the default profile
+      -->
+      <id>selenium</id>
+      <properties>
+        <!--
+          you can override these properties in settings.xml
+        -->
+        <selenium.serverHost>localhost</selenium.serverHost>
+        <selenium.serverPort>4444</selenium.serverPort>
+    <catalina.port>10081</catalina.port>
         <selenium.browserURL.celementsweb>http://localhost:${catalina.port}/</selenium.browserURL.celementsweb>
         <selenium.browserURL>${selenium.browserURL.celementsweb}</selenium.browserURL>
         <selenium.browserFirstRunURL.celementsweb>/</selenium.browserFirstRunURL.celementsweb>
@@ -185,69 +185,69 @@
         <selenium.password>${selenium.password.celementsweb}</selenium.password>
         <catalina.home.celementsweb>${env.CATALINA_HOME}</catalina.home.celementsweb>
         <catalina.home>${catalina.home.celementsweb}</catalina.home>
-		<xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
-		<xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
+    <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
+    <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
         <xwiki.cfg.xwiki.db.prefix.celementsweb>test_cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
-		<hibernate.cfg.xml.connection.username>test_selenium</hibernate.cfg.xml.connection.username>
-		<hibernate.cfg.xml.connection.password>test_cel_selenium</hibernate.cfg.xml.connection.password>
-			</properties>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
- 			<dependencies>
-				<dependency>
-					<groupId>com.celements</groupId>
-					<artifactId>celements-shared-tests</artifactId>
-					<version>1.12</version>
+    <hibernate.cfg.xml.connection.username>test_selenium</hibernate.cfg.xml.connection.username>
+    <hibernate.cfg.xml.connection.password>test_cel_selenium</hibernate.cfg.xml.connection.password>
+      </properties>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+       <dependencies>
+        <dependency>
+          <groupId>com.celements</groupId>
+          <artifactId>celements-shared-tests</artifactId>
+          <version>1.12</version>
           <scope>runtime</scope>
-				</dependency>
-			</dependencies>
-			<build>
- 				<resources>
-					<resource>
-						<directory>src/test/seleniumconfig</directory>
-						<includes>
-							<include>**/*</include>
-						</includes>
-						<filtering>true</filtering>
-					</resource>
-				</resources>
-				<plugins>
-					<plugin>
-						<groupId>org.codehaus.cargo</groupId>
-						<artifactId>cargo-maven2-plugin</artifactId>
-			            <executions>
-			              <execution>
-			                <id>start-container</id>
-			                <phase>pre-integration-test</phase>
-			                <goals>
-			                  <goal>start</goal>
+        </dependency>
+      </dependencies>
+      <build>
+         <resources>
+          <resource>
+            <directory>src/test/seleniumconfig</directory>
+            <includes>
+              <include>**/*</include>
+            </includes>
+            <filtering>true</filtering>
+          </resource>
+        </resources>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+                  <executions>
+                    <execution>
+                      <id>start-container</id>
+                      <phase>pre-integration-test</phase>
+                      <goals>
+                        <goal>start</goal>
                     <!--
-			                  <goal>deployer-undeploy</goal>
-			                  <goal>deployer-deploy</goal>
+                        <goal>deployer-undeploy</goal>
+                        <goal>deployer-deploy</goal>
                     -->
-			                </goals>
-			              </execution>
-			              <!--
-			                uncomment if you want to stop the container after
-			                integration-test
-			              -->
-			              <execution>
-			                <id>stop-container</id>
-			                <phase>post-integration-test</phase>
-			                <goals>
-			                  <goal>stop</goal>
-			                </goals>
-			             </execution>
-			            </executions>
-						<configuration>
-							<!-- Container configuration -->
-							<container>
-								<containerId>tomcat6x</containerId>
-								<type>installed</type>
-								<home>${catalina.home}</home>
-							</container>
-							<deployer>
+                      </goals>
+                    </execution>
+                    <!--
+                      uncomment if you want to stop the container after
+                      integration-test
+                    -->
+                    <execution>
+                      <id>stop-container</id>
+                      <phase>post-integration-test</phase>
+                      <goals>
+                        <goal>stop</goal>
+                      </goals>
+                   </execution>
+                  </executions>
+            <configuration>
+              <!-- Container configuration -->
+              <container>
+                <containerId>tomcat6x</containerId>
+                <type>installed</type>
+                <home>${catalina.home}</home>
+              </container>
+              <deployer>
                 <deployables>
                   <deployable>
                       <properties>
@@ -256,145 +256,145 @@
                   </deployable>
                 </deployables>
               </deployer>
-							<!-- Configuration to use with the container -->
-							<configuration>
-								<type>existing</type>
-								<home>${catalina.home}</home>
-								<properties>
-									<cargo.servlet.port>${catalina.port}</cargo.servlet.port>
-								</properties>
+              <!-- Configuration to use with the container -->
+              <configuration>
+                <type>existing</type>
+                <home>${catalina.home}</home>
+                <properties>
+                  <cargo.servlet.port>${catalina.port}</cargo.servlet.port>
+                </properties>
                 <deployables>
-			            <deployable>
-			                <properties>
-			                    <context>ROOT</context>
-			                </properties>
-			            </deployable>
+                  <deployable>
+                      <properties>
+                          <context>ROOT</context>
+                      </properties>
+                  </deployable>
                 </deployables>
-							</configuration>
-						</configuration>
-					</plugin>
-					<plugin>
-						<groupId>org.codehaus.mojo</groupId>
-						<artifactId>selenium-maven-plugin</artifactId>
-						<!--
-							uncomment if you want to execute the selenium html testsuite
-							<configuration> <browser>*firefox</browser>
-							<suite>src/test/selenium/testsuite.html</suite>
-							<startURL>http://localhost/celements-web</startURL>
-							</configuration>
-						-->
-						<executions>
-							<execution>
-								<phase>pre-integration-test</phase>
-								<goals>
-									<goal>start-server</goal>
-								</goals>
-								<configuration>
-									<background>true</background>
+              </configuration>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>selenium-maven-plugin</artifactId>
             <!--
-					                <browserSessionReuse>true</browserSessionReuse>
+              uncomment if you want to execute the selenium html testsuite
+              <configuration> <browser>*firefox</browser>
+              <suite>src/test/selenium/testsuite.html</suite>
+              <startURL>http://localhost/celements-web</startURL>
+              </configuration>
+            -->
+            <executions>
+              <execution>
+                <phase>pre-integration-test</phase>
+                <goals>
+                  <goal>start-server</goal>
+                </goals>
+                <configuration>
+                  <background>true</background>
+            <!--
+                          <browserSessionReuse>true</browserSessionReuse>
 -->
-									<logOutput>true</logOutput>
-								</configuration>
-							</execution>
-							<execution>
-								<id>stop</id>
-								<phase>post-integration-test</phase>
-								<goals>
-									<goal>stop-server</goal>
-								</goals>
-							</execution>
-							<!--
-								uncomment if you want to execute the selenium html testsuite.
-								autostarts selenium-server, so you have to disable the start of
-								selenium-server in pre-integration-test phase. <execution>
-								<id>htmltest</id> <phase>integration-test</phase> <goals>
-								<goal>selenese</goal> </goals> </execution>
-							-->
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<!--
-								Skip the normal tests, we'll run them in the integration-test
-								phase
-							-->
-							<skip>true</skip>
+                  <logOutput>true</logOutput>
+                </configuration>
+              </execution>
+              <execution>
+                <id>stop</id>
+                <phase>post-integration-test</phase>
+                <goals>
+                  <goal>stop-server</goal>
+                </goals>
+              </execution>
+              <!--
+                uncomment if you want to execute the selenium html testsuite.
+                autostarts selenium-server, so you have to disable the start of
+                selenium-server in pre-integration-test phase. <execution>
+                <id>htmltest</id> <phase>integration-test</phase> <goals>
+                <goal>selenese</goal> </goals> </execution>
+              -->
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <!--
+                Skip the normal tests, we'll run them in the integration-test
+                phase
+              -->
+              <skip>true</skip>
               <skipTests>false</skipTests>
-						</configuration>
-						<executions>
-							<execution>
-								<phase>integration-test</phase>
-								<goals>
-									<goal>test</goal>
-								</goals>
-								<configuration>
-									<skip>false</skip>
-								</configuration>
-							</execution>
-						</executions>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-		<profile>
-			<!--
-				to use this profile you also have to use the selenium profile usage:
-				mvn clean install -P selenium, firefox this is the default profile
-			-->
-			<id>firefox</id>
-			<properties>
-				<selenium.browserStartCommand>*firefox</selenium.browserStartCommand>
-			</properties>
-			<activation>
-				<activeByDefault>true</activeByDefault>
-			</activation>
-		</profile>
-		<profile>
-			<!--
-				to use this profile you also have to use the selenium profile usage:
-				mvn clean install -P selenium, iexplore
-			-->
-			<id>iexplore</id>
-			<properties>
-				<selenium.browserStartCommand>*iexplore</selenium.browserStartCommand>
-			</properties>
-		</profile>
-		<profile>
-			<!--
-				to use this profile you also have to use either the deploy or the
-				selenium profile usage (without selenium-tests): mvn clean install
-				-P local,deploy usage (with selenium-tests): mvn clean install -P
-				local,selenium,firefox
-			-->
-			<id>local</id>
-			<properties>
-				<xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
-				<xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
-    		    <xwiki.cfg.xwiki.db.prefix.celementsweb>cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
-			</properties>
-		</profile>
-		<profile>
-			<!-- usage: mvn install -P deploy  -->
-			<id>deploy</id>
-			<properties>
-				<maven.test.skip>true</maven.test.skip>
-			</properties>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<configuration>
-							<!-- Skip the tests -->
-							<skip>true</skip>
-							<skipTests>true</skipTests>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>integration-test</phase>
+                <goals>
+                  <goal>test</goal>
+                </goals>
+                <configuration>
+                  <skip>false</skip>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <!--
+        to use this profile you also have to use the selenium profile usage:
+        mvn clean install -P selenium, firefox this is the default profile
+      -->
+      <id>firefox</id>
+      <properties>
+        <selenium.browserStartCommand>*firefox</selenium.browserStartCommand>
+      </properties>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+    <profile>
+      <!--
+        to use this profile you also have to use the selenium profile usage:
+        mvn clean install -P selenium, iexplore
+      -->
+      <id>iexplore</id>
+      <properties>
+        <selenium.browserStartCommand>*iexplore</selenium.browserStartCommand>
+      </properties>
+    </profile>
+    <profile>
+      <!--
+        to use this profile you also have to use either the deploy or the
+        selenium profile usage (without selenium-tests): mvn clean install
+        -P local,deploy usage (with selenium-tests): mvn clean install -P
+        local,selenium,firefox
+      -->
+      <id>local</id>
+      <properties>
+        <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
+        <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
+            <xwiki.cfg.xwiki.db.prefix.celementsweb>cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
+      </properties>
+    </profile>
+    <profile>
+      <!-- usage: mvn install -P deploy  -->
+      <id>deploy</id>
+      <properties>
+        <maven.test.skip>true</maven.test.skip>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <!-- Skip the tests -->
+              <skip>true</skip>
+              <skipTests>true</skipTests>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>

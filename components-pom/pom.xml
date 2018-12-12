@@ -26,7 +26,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>3.2</version>
+    <version>3.3-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -47,10 +47,10 @@
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
+
   <dependencies>
     <!-- Add here all your dependencies -->
-    
+
     <!-- Celements-XWiki -->
     <dependency>
       <groupId>com.celements</groupId>
@@ -321,7 +321,7 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-    
+
     <!-- Testing -->
     <dependency>
       <groupId>junit</groupId>

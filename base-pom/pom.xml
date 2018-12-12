@@ -125,7 +125,7 @@
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-query-manager</artifactId>
         <version>2.7.2</version>
-      </dependency>      
+      </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-query-xwql</artifactId>
@@ -303,6 +303,12 @@
         <artifactId>jersey-common</artifactId>
         <!-- Java 8 required before including 2.26+ -->
         <version>2.25</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <!-- Java 8 required before including 2.26+ -->
+        <version>2.25.1</version>
       </dependency>
 
       <!-- Logging -->
