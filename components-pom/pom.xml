@@ -309,6 +309,11 @@
       <artifactId>jersey-common</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-client</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- Logging -->
     <!-- Make sure we provide a default implementation of slf4j for any test indirectly use it -->
