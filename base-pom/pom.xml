@@ -304,12 +304,6 @@
         <!-- Java 8 required before including 2.26+ -->
         <version>2.25.1</version>
       </dependency>
-      <dependency>
-        <groupId>org.glassfish.jersey.core</groupId>
-        <artifactId>jersey-client</artifactId>
-        <!-- Java 8 required before including 2.26+ -->
-        <version>2.25.1</version>
-      </dependency>
 
       <!-- Logging -->
       <dependency>
