@@ -472,18 +472,6 @@
   </build>
   <repositories>
     <repository>
-      <id>codehaus-releases</id>
-      <name>Codehaus Remote Repository for Third Party Dependencies
-          </name>
-      <url>http://repository.codehaus.org</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
       <id>xwiki-externals</id>
       <name>XWiki Maven2 Remote Repository for Third Party Dependencies
           </name>
