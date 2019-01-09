@@ -555,11 +555,6 @@
         <enabled>false</enabled>
       </snapshots>
     </repository>
-    <repository>
-        <id>jrs-rest-java-client</id>
-        <name>Jaspersoft clients releases</name>
-        <url>http://jaspersoft.artifactoryonline.com/jaspersoft/jaspersoft-clients-releases/</url>
-    </repository>
   </repositories>
   <pluginRepositories>
     <pluginRepository>
