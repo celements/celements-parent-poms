@@ -47,10 +47,10 @@
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
+
   <dependencies>
     <!-- Add here all your dependencies -->
-    
+
     <!-- Celements-XWiki -->
     <dependency>
       <groupId>com.celements</groupId>
@@ -321,7 +321,7 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-    
+
     <!-- Testing -->
     <dependency>
       <groupId>junit</groupId>
