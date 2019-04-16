@@ -49,7 +49,7 @@
         <version>2.7.2-CEL3</version>
       </dependency>
 
-      <!-- Other XWiki modules -->
+      <!-- XWiki -->
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-configuration-default</artifactId>
@@ -290,6 +290,7 @@
         <version>20.0</version>
       </dependency>
 
+    <!-- XWiki Plugins -->
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-mailsender</artifactId>

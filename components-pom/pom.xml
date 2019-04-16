@@ -103,6 +103,7 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-rendering-api</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
@@ -122,7 +123,12 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-component-multi</artifactId>
+      <scope>provided</scope>
       <!-- Only required at runtime (ie in the distribution) -->
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-container-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -135,6 +141,21 @@
       <artifactId>xwiki-core-query-xwql</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-csrf</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-shared-tests</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-captcha</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- XWiki Plugins -->
     <dependency>
@@ -145,6 +166,11 @@
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-skinx</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <artifactId>xwiki-plugin-scheduler</artifactId>
       <scope>provided</scope>
     </dependency>
 
