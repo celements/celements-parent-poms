@@ -315,6 +315,21 @@
       <artifactId>jersey-common</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>info.informatica</groupId>
+      <artifactId>css4j</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>info.informatica</groupId>
+      <artifactId>jclf</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>xalan</groupId>
+      <artifactId>xalan</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- Logging -->
     <!-- Make sure we provide a default implementation of slf4j for any test indirectly use it -->
