@@ -26,7 +26,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>3.3</version>
+    <version>3.4-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -301,6 +301,12 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+      <!-- XML API [CELDEV-808] -->
+    <dependency>
+      <groupId>xml-apis</groupId>
+      <artifactId>xml-apis</artifactId>
       <scope>provided</scope>
     </dependency>
     <!-- JAX-RS implementation -->
