@@ -145,11 +145,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-shared-tests</artifactId>
-        <version>2.7.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-captcha</artifactId>
         <version>2.7.2</version>
       </dependency>
@@ -290,7 +285,7 @@
         <version>20.0</version>
       </dependency>
 
-    <!-- XWiki Plugins -->
+      <!-- XWiki Plugins -->
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-mailsender</artifactId>
@@ -358,6 +353,11 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>4.11</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-shared-tests</artifactId>
+        <version>2.7.2</version>
       </dependency>
       <dependency>
         <groupId>org.easymock</groupId>
