@@ -30,14 +30,14 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celementsweb</artifactId>
-  <version>3.4-SNAPSHOT</version>
+  <version>3.4</version>
   <packaging>pom</packaging>
   <description>Celements Web Main POM</description>
   <scm>
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
-    <tag>HEAD</tag>
+    <tag>celementsweb-3.4</tag>
   </scm>
   <licenses>
     <license>
