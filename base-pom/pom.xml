@@ -271,7 +271,7 @@
       <dependency>
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
-        <version>1.4</version>
+        <version>1.3.3</version>
       </dependency>
       <dependency>
         <groupId>commons-net</groupId>
@@ -293,7 +293,7 @@
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-skinx</artifactId>
-        <version>1.22</version>
+        <version>1.19</version>
       </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
