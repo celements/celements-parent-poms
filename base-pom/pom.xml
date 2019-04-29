@@ -152,7 +152,7 @@
       <dependency>
         <groupId>radeox</groupId>
         <artifactId>radeox</artifactId>
-        <version>1.0</version>
+        <version>1.0-b2</version>
       </dependency>
 
       <!-- RSS Feed processing -->
