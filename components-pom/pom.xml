@@ -403,11 +403,6 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.easymock</groupId>
-      <artifactId>easymockclassextension</artifactId>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-subsystem-migration-manager</artifactId>
       <version>4.0-SNAPSHOT</version>
