@@ -202,23 +202,6 @@
         <version>1.4.2</version>
       </dependency>
 
-      <dependency>
-        <groupId>org.apache.xmlrpc</groupId>
-        <artifactId>xmlrpc-server</artifactId>
-        <version>3.1.3</version>
-        <exclusions>
-          <exclusion>
-            <artifactId>junit</artifactId>
-            <groupId>junit</groupId>
-          </exclusion>
-          <!-- [CELDEV-808] exclude xml-apis compile dependency -->
-          <exclusion>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
       <!-- The JRCS JARS are are in our repo till we get them published on the central repository.
            JRCS home page: http://www.suigeneris.org/kb/display/jrcs/JRCS+Home -->
       <dependency>
