@@ -55,7 +55,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>4.0-SNAPSHOT</version>
+      <version>4.0-M1.1</version>
       <scope>provided</scope>
     </dependency>
 
@@ -405,7 +405,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-subsystem-migration-manager</artifactId>
-      <version>4.0-SNAPSHOT</version>
+      <version>4.0-M1</version>
       <scope>test</scope>
     </dependency>
 
