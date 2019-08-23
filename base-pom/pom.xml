@@ -26,7 +26,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
-  <version>4.0-SNAPSHOT</version>
+  <version>4.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
@@ -635,7 +635,7 @@
         <jdk>[1.8,)</jdk>
       </activation>
       <properties>
-        <additionalparam>-Xdoclint:none</additionalparam>
+        <doclint>none</doclint>
       </properties>
     </profile>
   </profiles>
