@@ -284,6 +284,12 @@
         <artifactId>guava</artifactId>
         <version>27.1-jre</version>
       </dependency>
+      <dependency>
+        <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
+        <groupId>com.codepoetics</groupId>
+        <artifactId>protonpack</artifactId>
+        <version>1.16</version>
+      </dependency>
 
       <!-- XWiki Plugins -->
       <dependency>
