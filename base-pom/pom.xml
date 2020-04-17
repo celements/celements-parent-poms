@@ -309,10 +309,9 @@
       </dependency>
 
       <dependency>
-        <!-- TODO [CELDEV-815] Upgrade to javax.servlet Spec 4.0 -->
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
-        <version>2.5</version>
+        <version>5.0</version>
       </dependency>
       <dependency>
         <groupId>javax.inject</groupId>
