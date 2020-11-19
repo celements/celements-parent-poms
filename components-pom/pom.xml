@@ -26,7 +26,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>4.1</version>
+    <version>4.2-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -181,6 +181,16 @@
       <artifactId>hibernate</artifactId>
       <version>3.2.6.ga</version>
       <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-collections</groupId>
+          <artifactId>commons-collections</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>dom4j</groupId>
+          <artifactId>dom4j</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Authentication -->
@@ -340,9 +350,30 @@
       <artifactId>jersey-common</artifactId>
       <scope>provided</scope>
     </dependency>
+    <!-- Dom4J & Css4J [CELDEV-927] -->
     <dependency>
-      <groupId>info.informatica</groupId>
+      <groupId>org.dom4j</groupId>
+      <artifactId>dom4j</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>jaxen</groupId>
+      <artifactId>jaxen</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.carte</groupId>
       <artifactId>css4j</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.sf.carte</groupId>
+      <artifactId>css4j-dom4j</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.jsoup</groupId>
+      <artifactId>jsoup</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
