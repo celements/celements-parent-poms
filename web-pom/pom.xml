@@ -26,11 +26,11 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>4.2-SNAPSHOT</version>
+    <version>4.2</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celementsweb</artifactId>
-  <version>4.2-SNAPSHOT</version>
+  <version>4.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Web Main POM</description>
   <scm>
