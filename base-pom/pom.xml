@@ -287,7 +287,7 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>27.1-jre</version>
+        <version>29.0-jre</version>
       </dependency>
       <dependency>
         <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
