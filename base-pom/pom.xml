@@ -371,10 +371,9 @@
         <version>2.7.2</version>
       </dependency>
       <dependency>
-        <!-- TODO [CELDEV-813] upgrade easymock to version 4.x -->
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
-        <version>3.6</version>
+        <version>4.2</version>
       </dependency>
       <dependency>
         <groupId>net.sourceforge.htmlunit</groupId>
