@@ -256,7 +256,7 @@
       <dependency>
         <groupId>commons-collections</groupId>
         <artifactId>commons-collections</artifactId>
-        <version>3.2.1</version>
+        <version>3.2.2</version>
       </dependency>
       <dependency>
         <groupId>commons-io</groupId>
@@ -287,13 +287,18 @@
       <dependency>
         <groupId>com.google.guava</groupId>
         <artifactId>guava</artifactId>
-        <version>27.1-jre</version>
+        <version>30.1.1-jre</version>
       </dependency>
       <dependency>
         <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
         <groupId>com.codepoetics</groupId>
         <artifactId>protonpack</artifactId>
         <version>1.16</version>
+      </dependency>
+      <dependency>
+        <groupId>one.util</groupId>
+        <artifactId>streamex</artifactId>
+        <version>0.7.3</version>
       </dependency>
 
       <!-- XWiki Plugins -->
@@ -371,10 +376,9 @@
         <version>2.7.2</version>
       </dependency>
       <dependency>
-        <!-- TODO [CELDEV-813] upgrade easymock to version 4.x -->
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
-        <version>3.6</version>
+        <version>4.2</version>
       </dependency>
       <dependency>
         <groupId>net.sourceforge.htmlunit</groupId>
