@@ -282,6 +282,9 @@
     <dependency>
       <groupId>com.codepoetics</groupId>
       <artifactId>protonpack</artifactId>
+    </dependency><dependency>
+      <groupId>one.util</groupId>
+      <artifactId>streamex</artifactId>
     </dependency>
     <dependency>
       <groupId>javax.inject</groupId>
