@@ -26,14 +26,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
-  <version>5.0.1</version>
+  <version>5.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
-    <tag>base-pom-5.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
   <properties>
     <platform.core.version>1.0</platform.core.version>
