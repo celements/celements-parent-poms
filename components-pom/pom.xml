@@ -26,7 +26,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.0.1</version>
+    <version>5.1-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -55,7 +55,13 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>5.0.1</version>
+      <version>5.1-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-component</artifactId>
+      <version>5.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
@@ -114,17 +120,6 @@
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-rendering-macro-wikibridge</artifactId>
       <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-component-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-component-multi</artifactId>
-      <scope>provided</scope>
-      <!-- Only required at runtime (ie in the distribution) -->
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
