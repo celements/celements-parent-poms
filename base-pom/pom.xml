@@ -231,12 +231,12 @@
         <version>0.4.2</version>
       </dependency>
 
-<!--  JTidy hasn't been released for ages (since 2001). A snapshot version exists at
+      <!-- JTidy hasn't been released for ages (since 2001). A snapshot version exists at
            http://jtidy.sourceforge.net/snapshots/ but Maven requires non-snapshots in order to
            allow a release (this is for reproducibility). Thus we've had to upload JTidy into
-           our custom repository  -->
+           our custom repository -->
       <dependency>
-        <groupId>com.github.jtidy</groupId>
+        <groupId>jtidy</groupId>
         <artifactId>jtidy</artifactId>
         <version>8.0-20060801.131059-3-dev</version>
         <exclusions>
