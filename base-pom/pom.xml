@@ -147,10 +147,32 @@
         <artifactId>xwiki-core-captcha</artifactId>
         <version>2.7.2</version>
       </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-cache-jbosscache</artifactId>
-      <version>2.7.2</version>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-cache-jbosscache</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <!-- XWiki syntax parsers -->
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-syntax-doxia</artifactId>
+        <version>2.7.2</version>
+        <!-- Only needed at runtime since it's a component implementation -->
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-syntax-wikimodel</artifactId>
+        <version>2.7.2</version>
+        <!-- Only needed at runtime since it's a component implementation -->
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-rendering-syntax-xwiki10</artifactId>
+        <version>2.7.2</version>
+        <!-- Only needed at runtime since it's a component implementation -->
+        <scope>provided</scope>
       </dependency>
 
       <dependency>
