@@ -147,6 +147,11 @@
         <artifactId>xwiki-core-captcha</artifactId>
         <version>2.7.2</version>
       </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-core-cache-jbosscache</artifactId>
+      <version>2.7.2</version>
+      </dependency>
 
       <dependency>
         <groupId>radeox</groupId>
