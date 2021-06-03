@@ -443,7 +443,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-subsystem-migration-manager</artifactId>
-      <version>5.0</version>
+      <version>5.2-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
 
