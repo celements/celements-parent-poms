@@ -273,6 +273,17 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <dependency>
+        <groupId>com.github.jtidy</groupId>
+        <artifactId>jtidy</artifactId>
+        <version>1.0.2</version>
+        <exclusions>
+          <exclusion>
+            <groupId>xerces</groupId>
+            <artifactId>dom3-xml-apis</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
 
       <dependency>
         <groupId>commons-collections</groupId>
