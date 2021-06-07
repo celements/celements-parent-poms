@@ -157,22 +157,37 @@
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-syntax-doxia</artifactId>
         <version>2.7.2</version>
-        <!-- Only needed at runtime since it's a component implementation -->
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-syntax-wikimodel</artifactId>
         <version>2.7.2</version>
-        <!-- Only needed at runtime since it's a component implementation -->
-        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-syntax-xwiki10</artifactId>
         <version>2.7.2</version>
-        <!-- Only needed at runtime since it's a component implementation -->
-        <scope>provided</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-core</artifactId>
+         <version>3.3.2.GA</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-annotations</artifactId>
+         <version>3.4.0.GA</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-commons-annotations</artifactId>
+         <version>3.3.0.ga</version>
+      </dependency>
+      <dependency>
+         <groupId>org.hibernate</groupId>
+         <artifactId>hibernate-entitymanager</artifactId>
+         <version>3.4.0.GA</version>
       </dependency>
 
       <dependency>
