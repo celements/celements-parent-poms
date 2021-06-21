@@ -469,6 +469,11 @@
         <version>30.1.1-jre</version>
       </dependency>
       <dependency>
+        <groupId>com.google.code.findbugs</groupId>
+        <artifactId>jsr305</artifactId>
+        <version>3.0.2</version>
+      </dependency>
+      <dependency>
         <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
         <groupId>com.codepoetics</groupId>
         <artifactId>protonpack</artifactId>
