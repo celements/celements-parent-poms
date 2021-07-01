@@ -335,6 +335,10 @@
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
