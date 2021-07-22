@@ -20,9 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  *
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
@@ -30,14 +28,14 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
-  <version>5.2-SNAPSHOT</version>
+  <version>5.2</version>
   <packaging>pom</packaging>
   <description>Celements Main POM</description>
   <scm>
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
-    <tag>HEAD</tag>
+    <tag>celements-5.2</tag>
   </scm>
   <properties>
     <!--
