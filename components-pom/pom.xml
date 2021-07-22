@@ -26,7 +26,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.2-SNAPSHOT</version>
+    <version>5.2</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -55,19 +55,19 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>5.2-SNAPSHOT</version>
+      <version>5.2</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-component</artifactId>
-      <version>5.1-SNAPSHOT</version>
+      <version>5.1</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-commons</artifactId>
-      <version>5.0-SNAPSHOT</version>
+      <version>5.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -404,7 +404,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>5.0-SNAPSHOT</version>
+      <version>5.0</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
@@ -421,7 +421,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-subsystem-migration-manager</artifactId>
-      <version>5.2-SNAPSHOT</version>
+      <version>5.2</version>
       <scope>test</scope>
     </dependency>
 
