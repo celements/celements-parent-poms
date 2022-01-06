@@ -26,11 +26,11 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.2</version>
+    <version>5.5</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celementsweb</artifactId>
-  <version>5.3-SNAPSHOT</version>
+  <version>5.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Web Main POM</description>
   <scm>
@@ -50,7 +50,7 @@
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!--  default properties, can be overriden in profile -->
-        <catalina.home>${env.CATALINA_HOME}</catalina.home>
+    <catalina.home>${env.CATALINA_HOME}</catalina.home>
     <xwiki.cfg.xwiki.store.migration.databases />
     <xwiki.cfg.xwiki.virtual>0</xwiki.cfg.xwiki.virtual>
     <xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
@@ -66,7 +66,8 @@
     <hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>
     <hibernate.cfg.xml.dbtype_extension />
     <fop-config.xml.fonts.directory>${catalina.home}/ROOT/WEB-INF/fonts</fop-config.xml.fonts.directory>
-    <log4j.properties.appender.file.File>${catalina.home}/logs/celementsweb.log</log4j.properties.appender.file.File>
+    <log4j.properties.logdir>${catalina.home}/logs</log4j.properties.logdir>
+    <log4j.properties.monitorInterval>30</log4j.properties.monitorInterval>
     <log4j.properties.logger.config />
   </properties>
   <dependencies>
