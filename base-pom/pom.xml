@@ -50,18 +50,8 @@
       <!-- XWiki -->
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-configuration-default</artifactId>
+        <artifactId>xwiki-core-properties</artifactId>
         <version>2.7.2</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
@@ -96,6 +86,10 @@
         <exclusions>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
         </exclusions>
@@ -105,6 +99,10 @@
         <artifactId>xwiki-core-velocity</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
@@ -132,23 +130,16 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-model</artifactId>
-        <version>2.7.2</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-bridge</artifactId>
         <version>2.7.2</version>
         <exclusions>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-model</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -157,6 +148,10 @@
         <artifactId>xwiki-core-cache-api</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
@@ -169,9 +164,18 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-script</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-api</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
@@ -193,6 +197,10 @@
         <artifactId>xwiki-core-rendering-xwiki</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
@@ -226,6 +234,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-default</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-model</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -262,6 +274,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -269,6 +285,18 @@
         <artifactId>xwiki-core-captcha</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-default</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
@@ -580,6 +608,21 @@
         </exclusions>
       </dependency>
       <dependency>
+        <groupId>commons-configuration</groupId>
+        <artifactId>commons-configuration</artifactId>
+        <version>1.6</version>
+        <exclusions>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils-core</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
         <!-- TODO [CELDEV-812] upgrade apache commons fileupload to version 1.4 -->
         <groupId>commons-fileupload</groupId>
         <artifactId>commons-fileupload</artifactId>
@@ -719,6 +762,10 @@
         <artifactId>xwiki-core-shared-tests</artifactId>
         <version>2.7.2</version>
         <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-configuration-api</artifactId>
+          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-default</artifactId>
