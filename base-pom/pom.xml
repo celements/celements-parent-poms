@@ -50,17 +50,6 @@
       <!-- XWiki -->
       <dependency>
         <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-web-gwt</artifactId>
-        <version>2.7.2</version>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-web-gwt-wysiwyg-server</artifactId>
-        <version>2.7.2</version>
-        <type>war</type>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform</groupId>
         <artifactId>xwiki-rest-server</artifactId>
         <version>2.7.2</version>
         <exclusions>
