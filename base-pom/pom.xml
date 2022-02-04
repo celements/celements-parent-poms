@@ -49,6 +49,22 @@
 
       <!-- XWiki -->
       <dependency>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-web-gwt</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-web-gwt-wysiwyg-server</artifactId>
+        <version>2.7.2</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-rest-server</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-configuration-default</artifactId>
         <version>2.7.2</version>
@@ -251,6 +267,11 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-crypto</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-csrf</artifactId>
         <version>2.7.2</version>
         <exclusions>
@@ -285,6 +306,11 @@
       <dependency>
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-cache-jbosscache</artifactId>
+        <version>2.7.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-tag-api</artifactId>
         <version>2.7.2</version>
       </dependency>
       <!-- XWiki syntax parsers -->
@@ -343,6 +369,11 @@
           </exclusion>
         </exclusions>
       </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-legacy</artifactId>
+        <version>2.7.2</version>
+      </dependency>
 
       <dependency>
         <groupId>org.hibernate</groupId>
@@ -394,6 +425,22 @@
           <exclusion>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-validator</artifactId>
+        <version>4.0.2.GA</version>
+        <scope>runtime</scope>
+        <exclusions>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -684,6 +731,16 @@
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-scheduler</artifactId>
         <version>1.25</version>
+      </dependency>
+      <dependency>
+        <groupId>com.xpn.xwiki.platform.plugins</groupId>
+        <artifactId>xwiki-plugin-application-manager</artifactId>
+        <version>1.19</version>
+      </dependency>
+      <dependency>
+        <groupId>com.xpn.xwiki.platform.plugins</groupId>
+        <artifactId>xwiki-plugin-wiki-manager</artifactId>
+        <version>1.26</version>
       </dependency>
 
       <dependency>
