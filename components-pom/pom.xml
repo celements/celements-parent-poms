@@ -24,7 +24,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.5</version>
+    <version>5.6-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -38,30 +38,14 @@
     <tag>HEAD</tag>
   </scm>
   <properties>
-    <!--
-      TODO: remove this if you inherit a project that has the core version
-      set
-    -->
+    <!-- TODO: remove this if you inherit a project that has the core version set -->
     <platform.core.version>1.0</platform.core.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
-    <!-- Add here all your dependencies -->
 
-    <!-- Celements-XWiki -->
-    <dependency>
-      <groupId>com.celements</groupId>
-      <artifactId>celements-xwiki-core</artifactId>
-      <version>5.3</version>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.celements</groupId>
-      <artifactId>celements-component</artifactId>
-      <version>5.1</version>
-      <scope>provided</scope>
-    </dependency>
+    <!-- Celements -->
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-commons</artifactId>
@@ -69,12 +53,39 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- XWiki -->
+    <!-- Celements-XWiki -->
     <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-configuration-default</artifactId>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-xwiki-core</artifactId>
+      <version>5.4-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-component</artifactId>
+      <version>5.2-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-config-source-api</artifactId>
+      <version>5.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-config-source</artifactId>
+      <version>5.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-reference</artifactId>
+      <version>5.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- XWiki -->
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-observation-api</artifactId>
@@ -103,11 +114,6 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-context</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-model</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
