@@ -319,6 +319,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
