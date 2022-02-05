@@ -408,7 +408,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>5.0</version>
+      <version>5.1-SNAPSHOT</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
