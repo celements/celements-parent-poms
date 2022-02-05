@@ -190,11 +190,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-script</artifactId>
-        <version>2.7.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-api</artifactId>
         <version>2.7.2</version>
         <exclusions>
@@ -436,8 +431,20 @@
         <version>2.7.2</version>
         <exclusions>
           <exclusion>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-model</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
