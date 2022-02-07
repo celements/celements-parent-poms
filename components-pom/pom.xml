@@ -173,11 +173,6 @@
       <artifactId>xwiki-plugin-skinx</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>com.celements</groupId>
-      <artifactId>xwiki-plugin-scheduler</artifactId>
-      <scope>provided</scope>
-    </dependency>
 
     <dependency>
       <groupId>radeox</groupId>
