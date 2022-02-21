@@ -922,6 +922,11 @@
       </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
+        <artifactId>xwiki-plugin-scheduler</artifactId>
+        <version>1.25</version>
+      </dependency>
+      <dependency>
+        <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-application-manager</artifactId>
         <version>1.19</version>
       </dependency>
