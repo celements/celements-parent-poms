@@ -44,7 +44,7 @@
       <dependency>
         <groupId>com.xpn.xwiki.platform</groupId>
         <artifactId>xwiki-core</artifactId>
-        <version>2.7.2-CEL3</version>
+        <version>2.7.2-CEL4</version>
       </dependency>
 
       <!-- XWiki -->
@@ -1155,14 +1155,6 @@
             <artifactId>xml-apis</artifactId>
           </exclusion>
         </exclusions>
-      </dependency>
-      <!-- This Axis dependency is not used directly and shouldn't be declared. However it's used
-           by the Google API used in the Google Plugin API. It should be declared in that project's
-           POM but it's not so we have to declare it in the meantime... -->
-      <dependency>
-        <groupId>org.apache.axis</groupId>
-        <artifactId>axis</artifactId>
-        <version>1.4</version>
       </dependency>
       <!-- Regular expressions -->
       <dependency>
