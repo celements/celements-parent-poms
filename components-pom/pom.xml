@@ -57,7 +57,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>5.4-SNAPSHOT</version>
+      <version>5.4</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -403,7 +403,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>5.1-SNAPSHOT</version>
+      <version>5.1</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
