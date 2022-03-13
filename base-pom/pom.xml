@@ -607,7 +607,7 @@
             <artifactId>cxf-rt-rs-client</artifactId>
           </exclusion>
           <exclusion>
-          <!--  exclude quartz since we're already including it in xwiki-plugin-scheduler -->
+          <!--  exclude quartz since we're already including it in celements-scheduler -->
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
           </exclusion>
@@ -945,7 +945,7 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
-        <artifactId>xwiki-plugin-scheduler</artifactId>
+        <artifactId>celements-scheduler</artifactId>
         <version>5.0-SNAPSHOT</version>
       </dependency>
       <dependency>
