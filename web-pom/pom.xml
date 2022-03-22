@@ -26,11 +26,11 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.6-SNAPSHOT</version>
+    <version>5.7</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celementsweb</artifactId>
-  <version>5.6-SNAPSHOT</version>
+  <version>5.7-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Web Main POM</description>
   <scm>
@@ -106,7 +106,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>5.0</version>
+      <version>5.1</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
