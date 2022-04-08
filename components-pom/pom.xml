@@ -24,7 +24,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.7</version>
+    <version>5.8-SNAPSHOT5.8-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
