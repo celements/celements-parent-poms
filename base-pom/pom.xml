@@ -957,11 +957,6 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>com.celements</groupId>
-        <artifactId>celements-scheduler</artifactId>
-        <version>5.0-SNAPSHOT</version>
-      </dependency>
-      <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-scheduler</artifactId>
         <version>1.25</version>
