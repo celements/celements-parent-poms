@@ -295,6 +295,10 @@
         <version>2.7.2</version>
         <exclusions>
           <exclusion>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-model</artifactId>
           </exclusion>
