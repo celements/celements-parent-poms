@@ -24,7 +24,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
-  <version>5.9-SNAPSHOT</version>
+  <version>5.10-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Master Root POM</description>
   <scm>
