@@ -81,7 +81,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-reference</artifactId>
-      <version>5.0</version>
+      <version>5.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
