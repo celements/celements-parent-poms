@@ -24,7 +24,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>5.9</version>
+    <version>5.10-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -434,6 +434,9 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <!-- XWiki rule is to put test in *Test classes -->
           <configuration>
+            <argLine>
+                --add-opens java.base/java.lang=ALL-UNNAMED
+            </argLine>
             <includes>
               <include>**/*Test.class</include>
             </includes>
