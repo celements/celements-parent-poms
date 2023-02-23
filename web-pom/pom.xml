@@ -163,41 +163,6 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
-          <groupId>com.jarslab.maven</groupId>
-          <artifactId>babel-maven-plugin</artifactId>
-          <version>1.6</version>
-          <executions>
-              <execution>
-                  <id>js-transpile</id>
-                  <phase>process-resources</phase>
-                  <goals>
-                      <goal>babel</goal>
-                  </goals>
-                  <configuration>
-                      <verbose>true</verbose>
-                      <threads>4</threads>
-                      <babelSrc>${project.basedir}/babel-jslib/babel.min.js</babelSrc>
-                      <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
-                      <targetDir>${project.basedir}/target/celements-web/resources/</targetDir>
-                      <jsIncludes>
-                          <jsInclude>**/*.mjs</jsInclude>
-                      </jsIncludes>
-                      <formatPresets>false</formatPresets>
-                      <presets>
-                          [ "env",
-                            {
-                              "modules": false,
-                              "targets": {
-                                "esmodules": true
-                              }
-                            }
-                          ]
-                      </presets>
-                  </configuration>
-              </execution>
-          </executions>
-      </plugin>
     </plugins>
   </build>
   <profiles>
