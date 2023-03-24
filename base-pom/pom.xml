@@ -1417,9 +1417,7 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-            <complianceLevel>1.8</complianceLevel>
-            <source>1.8</source>
-            <target>1.8</target>
+            <release>8</release>
             <encoding>${project.build.sourceEncoding}</encoding>
           </configuration>
         </plugin>
@@ -1429,6 +1427,7 @@
           <version>1.14.0</version>
           <configuration>
             <source>1.8</source>
+            <target>1.8</target>
             <complianceLevel>1.8</complianceLevel>
           </configuration>
           <executions>
