@@ -673,44 +673,6 @@
         <version>2.2.5</version>
       </dependency>
 
-      <!-- RSS Feed processing -->
-      <dependency>
-        <groupId>rome</groupId>
-        <artifactId>rome</artifactId>
-        <version>1.0</version>
-        <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
-        <exclusions>
-          <exclusion>
-            <groupId>jdom</groupId>
-            <artifactId>jdom</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>rome</groupId>
-        <artifactId>rome-fetcher</artifactId>
-        <version>1.0</version>
-        <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
-        <exclusions>
-          <exclusion>
-            <groupId>jdom</groupId>
-            <artifactId>jdom</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-
       <!-- Authentication -->
       <dependency>
         <groupId>securityfilter</groupId>
@@ -988,7 +950,7 @@
         <version>2.5</version>
       </dependency>
       <dependency>
-        <groupId>portlet-api</groupId>
+        <groupId>javax.portlet</groupId>
         <artifactId>portlet-api</artifactId>
         <version>1.0</version>
       </dependency>

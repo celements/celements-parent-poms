@@ -207,25 +207,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- RSS Feed processing -->
-    <dependency>
-      <groupId>rome</groupId>
-      <artifactId>rome</artifactId>
-      <scope>provided</scope>
-      <!-- Exclude JDOM since Rome depends on JDOM 1.0 and we want to use JDOM 1.1 -->
-      <exclusions>
-        <exclusion>
-          <groupId>jdom</groupId>
-          <artifactId>jdom</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>rome</groupId>
-      <artifactId>rome-fetcher</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
     <!-- The JRCS JARS are are in our repo till we get them published on the central repository.
          JRCS home page: http://www.suigeneris.org/kb/display/jrcs/JRCS+Home -->
     <dependency>
@@ -309,6 +290,11 @@
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.portlet</groupId>
+      <artifactId>portlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
       <!-- XML API [CELDEV-808] -->
