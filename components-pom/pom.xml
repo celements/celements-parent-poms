@@ -63,7 +63,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-component</artifactId>
-      <version>5.2</version>
+      <version>5.3-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
