@@ -174,7 +174,6 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -218,6 +217,14 @@
 
     <!-- Commons -->
     <dependency>
+      <groupId>javax.inject</groupId>
+      <artifactId>javax.inject</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>javax.annotation</groupId>
+      <artifactId>javax.annotation-api</artifactId>
+    </dependency>
+    <dependency>
       <groupId>javax.validation</groupId>
       <artifactId>validation-api</artifactId>
     </dependency>
@@ -240,10 +247,6 @@
     <dependency>
       <groupId>one.util</groupId>
       <artifactId>streamex</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
     </dependency>
     <dependency>
       <groupId>org.codehaus.jackson</groupId>
