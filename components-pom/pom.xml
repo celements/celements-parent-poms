@@ -299,11 +299,6 @@
       <artifactId>javax.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>javax.portlet</groupId>
-      <artifactId>portlet-api</artifactId>
-      <scope>provided</scope>
-    </dependency>
       <!-- XML API [CELDEV-808] -->
     <dependency>
       <groupId>xml-apis</groupId>
