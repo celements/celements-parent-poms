@@ -68,11 +68,8 @@
     <hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
     <hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
     <hibernate.cfg.xml.statement_cache.size>2</hibernate.cfg.xml.statement_cache.size>
-    <hibernate.cfg.xml.dbtype_extension />
-    <fop-config.xml.fonts.directory>${catalina.home}/ROOT/WEB-INF/fonts</fop-config.xml.fonts.directory>
     <log4j.properties.logdir>${catalina.home}/logs</log4j.properties.logdir>
-    <log4j.properties.monitorInterval>30</log4j.properties.monitorInterval>
-    <log4j.properties.logger.config />
+    <log4j.properties.monitorInterval>60</log4j.properties.monitorInterval>
   </properties>
   <dependencies>
     <!-- Add here all your dependencies -->
