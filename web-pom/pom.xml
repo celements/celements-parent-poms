@@ -56,10 +56,14 @@
     <xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
     <xwiki.cfg.xwiki.db.prefix.celementsweb />
     <xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
-    <hibernate.cfg.xml.connection.url>jdbc:mysql://localhost/${xwiki.cfg.xwiki.db.prefix}main?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''</hibernate.cfg.xml.connection.url>
+    <hibernate.cfg.xml.connection.scheme>jdbc:mariadb</hibernate.cfg.xml.connection.scheme>
+    <hibernate.cfg.xml.connection.host>localhost</hibernate.cfg.xml.connection.host>
+    <hibernate.cfg.xml.connection.port />
+    <hibernate.cfg.xml.connection.query>?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''&amp;amp;usePipelineAuth=false</hibernate.cfg.xml.connection.query>
+    <hibernate.cfg.xml.connection.url>${hibernate.cfg.xml.connection.scheme}://${hibernate.cfg.xml.connection.host}${hibernate.cfg.xml.connection.port}/${xwiki.cfg.xwiki.db.prefix}${xwiki.cfg.xwiki.db}${hibernate.cfg.xml.connection.query}</hibernate.cfg.xml.connection.url>
     <hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
     <hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
-    <hibernate.cfg.xml.connection.driver_class>com.mysql.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
+    <hibernate.cfg.xml.connection.driver_class>org.mariadb.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
     <hibernate.cfg.xml.dialect>com.celements.query.CelMySQLDialect</hibernate.cfg.xml.dialect>
     <hibernate.cfg.xml.connection.provider_class>com.xpn.xwiki.store.DBCPConnectionProvider</hibernate.cfg.xml.connection.provider_class>
     <hibernate.cfg.xml.connection.pool_size>2</hibernate.cfg.xml.connection.pool_size>
@@ -178,7 +182,7 @@
         -->
         <selenium.serverHost>localhost</selenium.serverHost>
         <selenium.serverPort>4444</selenium.serverPort>
-    <catalina.port>10081</catalina.port>
+        <catalina.port>10081</catalina.port>
         <selenium.browserURL.celementsweb>http://localhost:${catalina.port}/</selenium.browserURL.celementsweb>
         <selenium.browserURL>${selenium.browserURL.celementsweb}</selenium.browserURL>
         <selenium.browserFirstRunURL.celementsweb>/</selenium.browserFirstRunURL.celementsweb>
@@ -189,11 +193,11 @@
         <selenium.password>${selenium.password.celementsweb}</selenium.password>
         <catalina.home.celementsweb>${env.CATALINA_HOME}</catalina.home.celementsweb>
         <catalina.home>${catalina.home.celementsweb}</catalina.home>
-    <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
-    <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
+        <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
+        <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
         <xwiki.cfg.xwiki.db.prefix.celementsweb>test_cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
-    <hibernate.cfg.xml.connection.username>test_selenium</hibernate.cfg.xml.connection.username>
-    <hibernate.cfg.xml.connection.password>test_cel_selenium</hibernate.cfg.xml.connection.password>
+        <hibernate.cfg.xml.connection.username>test_selenium</hibernate.cfg.xml.connection.username>
+        <hibernate.cfg.xml.connection.password>test_cel_selenium</hibernate.cfg.xml.connection.password>
       </properties>
       <activation>
         <activeByDefault>false</activeByDefault>
