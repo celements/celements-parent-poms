@@ -1269,6 +1269,7 @@
         </exclusions>
       </dependency>
 
+      <!-- JDBC connector -->
       <dependency>
         <groupId>org.mariadb.jdbc</groupId>
         <artifactId>mariadb-java-client</artifactId>
