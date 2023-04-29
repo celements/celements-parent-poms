@@ -94,6 +94,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-context</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -159,16 +163,9 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-context</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
+            <artifactId>xwiki-core-context</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -259,6 +256,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-observation</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-context</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -329,63 +330,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-action</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-url-api</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-model</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-url-default</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-model</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-captcha</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -400,6 +344,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-default</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-action</artifactId>
           </exclusion>
           <exclusion>
             <groupId>commons-logging</groupId>
