@@ -59,7 +59,7 @@
     <hibernate.cfg.xml.connection.scheme>jdbc:mariadb</hibernate.cfg.xml.connection.scheme>
     <hibernate.cfg.xml.connection.host>localhost</hibernate.cfg.xml.connection.host>
     <hibernate.cfg.xml.connection.port />
-    <hibernate.cfg.xml.connection.query>?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''&amp;amp;usePipelineAuth=false</hibernate.cfg.xml.connection.query>
+    <hibernate.cfg.xml.connection.query>?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''&amp;amp;usePipelineAuth=false&amp;amp;disablePipeline=true</hibernate.cfg.xml.connection.query>
     <hibernate.cfg.xml.connection.url>${hibernate.cfg.xml.connection.scheme}://${hibernate.cfg.xml.connection.host}${hibernate.cfg.xml.connection.port}/${xwiki.cfg.xwiki.db.prefix}${xwiki.cfg.xwiki.db}${hibernate.cfg.xml.connection.query}</hibernate.cfg.xml.connection.url>
     <hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
     <hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
