@@ -53,51 +53,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-api</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-local</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-observation</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-remote</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-configuration-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-xml</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -159,16 +114,13 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-context</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
+            <artifactId>xwiki-core-context</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -184,6 +136,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-local</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -259,6 +215,14 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-observation</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-context</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-api</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -329,63 +293,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-action</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-url-api</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-model</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-url-default</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-model</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-captcha</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -400,6 +307,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-default</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-action</artifactId>
           </exclusion>
           <exclusion>
             <groupId>commons-logging</groupId>
@@ -1175,6 +1086,11 @@
             <artifactId>junit</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>jmock</groupId>
+        <artifactId>jmock-cglib</artifactId>
+        <version>1.2.0</version>
       </dependency>
       <dependency>
         <groupId>org.jmock</groupId>
