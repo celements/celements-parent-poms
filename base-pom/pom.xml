@@ -53,55 +53,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-api</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-local</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-observation</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-observation-remote</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-configuration-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-context</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-xml</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -167,6 +118,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-context</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-api</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -181,6 +136,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-local</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -259,6 +218,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-context</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
