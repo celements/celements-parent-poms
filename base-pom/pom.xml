@@ -891,23 +891,6 @@
       </dependency>
 
       <!-- some more xwiki crap we pull up from xwiki-core -->
-      <!-- TODO: There's no release of Graffito yet (http://incubator.apache.org/graffito/jcr-mapping/index.html) -->
-      <dependency>
-        <groupId>org.apache.portals</groupId>
-        <artifactId>graffito-jcr-mapping</artifactId>
-        <version>1.0-a1-amelentev-dev</version>
-      </dependency>
-      <!-- TODO: Version 1.1 is available, should we upgrade? -->
-      <dependency>
-        <groupId>javax.transaction</groupId>
-        <artifactId>jta</artifactId>
-        <version>1.0.1B</version>
-      </dependency>
-      <dependency>
-        <groupId>javax.jcr</groupId>
-        <artifactId>jcr</artifactId>
-        <version>1.0</version>
-      </dependency>
       <dependency>
         <groupId>com.novell.ldap</groupId>
         <artifactId>jldap</artifactId>
