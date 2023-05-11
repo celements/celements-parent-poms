@@ -891,20 +891,6 @@
       </dependency>
 
       <!-- some more xwiki crap we pull up from xwiki-core -->
-      <dependency>
-        <groupId>org.apache.jackrabbit</groupId>
-        <artifactId>jackrabbit-core</artifactId>
-        <!-- TODO: Version 1.4.2 is published in the central repo, can we use that? -->
-        <version>1.1-xwiki</version>
-      </dependency>
-      <!-- TODO: we need to find what version of the googleapi we're using and get that to 
-                 the central repository if the license allows it -->
-      <dependency>
-        <groupId>com.google</groupId>
-        <artifactId>googleapi</artifactId>
-        <version>UNKNOWN</version>
-        <classifier>xwiki</classifier>
-      </dependency>
       <!-- TODO: There's no release of Graffito yet (http://incubator.apache.org/graffito/jcr-mapping/index.html) -->
       <dependency>
         <groupId>org.apache.portals</groupId>
