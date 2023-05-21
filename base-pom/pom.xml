@@ -1376,17 +1376,17 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>3.2.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1401,7 +1401,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1417,7 +1417,6 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-            <complianceLevel>1.8</complianceLevel>
             <source>1.8</source>
             <target>1.8</target>
             <encoding>${project.build.sourceEncoding}</encoding>
@@ -1430,7 +1429,6 @@
           <configuration>
             <source>1.8</source>
             <target>1.8</target>
-            <complianceLevel>1.8</complianceLevel>
           </configuration>
           <executions>
             <execution>
@@ -1467,7 +1465,8 @@
               </goals>
               <configuration>
                 <verbose>true</verbose>
-                <threads>4</threads>
+                <threads>3</threads>
+                <encoding>UTF-8</encoding>
                 <babelSrc>${project.basedir}/babel-jslib/babel.min.js</babelSrc>
                 <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
                 <targetDir>${project.basedir}/target/${project.build.finalName}/resources/</targetDir>
@@ -1492,11 +1491,6 @@
       </plugins>
     </pluginManagement>
     <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ftp</artifactId>
-        <version>3.5.3</version>
-      </extension>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-ssh-external</artifactId>
