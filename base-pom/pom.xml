@@ -1258,7 +1258,8 @@
               </goals>
               <configuration>
                 <verbose>true</verbose>
-                <threads>4</threads>
+                <threads>3</threads>
+                <encoding>UTF-8</encoding>
                 <babelSrc>${project.basedir}/babel-jslib/babel.min.js</babelSrc>
                 <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
                 <targetDir>${project.basedir}/target/${project.build.finalName}/resources/</targetDir>
