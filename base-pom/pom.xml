@@ -1172,7 +1172,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
-          <version>3.3.0</version>
+          <version>3.3.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1208,7 +1208,6 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-            <complianceLevel>1.8</complianceLevel>
             <source>1.8</source>
             <target>1.8</target>
             <encoding>${project.build.sourceEncoding}</encoding>
@@ -1221,7 +1220,6 @@
           <configuration>
             <source>1.8</source>
             <target>1.8</target>
-            <complianceLevel>1.8</complianceLevel>
           </configuration>
           <executions>
             <execution>
@@ -1241,6 +1239,14 @@
           <groupId>com.jarslab.maven</groupId>
           <artifactId>babel-maven-plugin</artifactId>
           <version>1.6</version>
+          <dependencies>
+            <dependency>
+              <!-- https://stackoverflow.com/a/75652825 -->
+              <groupId>org.codehaus.plexus</groupId>
+              <artifactId>plexus-utils</artifactId>
+              <version>3.5.1</version>
+            </dependency>
+          </dependencies>
           <executions>
             <execution>
               <id>js-transpile</id>
@@ -1250,7 +1256,8 @@
               </goals>
               <configuration>
                 <verbose>true</verbose>
-                <threads>4</threads>
+                <threads>3</threads>
+                <encoding>UTF-8</encoding>
                 <babelSrc>${project.basedir}/babel-jslib/babel.min.js</babelSrc>
                 <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
                 <targetDir>${project.basedir}/target/${project.build.finalName}/resources/</targetDir>
