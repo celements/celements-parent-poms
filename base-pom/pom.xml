@@ -772,11 +772,6 @@
       </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-scheduler</artifactId>
-        <version>1.25</version>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-application-manager</artifactId>
         <version>1.19</version>
       </dependency>
@@ -1042,7 +1037,7 @@
       <dependency>
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
-        <version>5.0.0</version>
+        <version>5.1.0</version>
       </dependency>
       <!-- Used to mock XWiki class -->
       <dependency>
@@ -1167,7 +1162,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>3.2.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1177,7 +1172,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1192,7 +1187,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1282,11 +1277,6 @@
       </plugins>
     </pluginManagement>
     <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ftp</artifactId>
-        <version>3.5.3</version>
-      </extension>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-ssh-external</artifactId>
