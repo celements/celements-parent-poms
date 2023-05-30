@@ -39,6 +39,8 @@
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.27</spring.version>
     <jersey.version>2.34</jersey.version>
+    <slf4j.version>1.7.36</slf4j.version>
+    <log4j.version>2.20.0</log4j.version>
   </properties>
   <dependencies>
   </dependencies>
@@ -945,44 +947,46 @@
         <version>1.7.5</version>
       </dependency>
 
-
       <!-- Logging -->
-      <!-- log4j2 with 1.2-bridge -->
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-1.2-api</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-api</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-core</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
-      <!-- slf4j logging -->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-web</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-slf4j-impl</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jul-to-slf4j</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
 
       <!-- Testing -->
