@@ -56,6 +56,8 @@
     <xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
     <xwiki.cfg.xwiki.db.prefix.celementsweb />
     <xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
+    <xwiki.cfg.xwiki.url.protocol>http</xwiki.cfg.xwiki.url.protocol>
+    <xwiki.cfg.xwiki.url.host>localhost</xwiki.cfg.xwiki.url.host>
     <hibernate.cfg.xml.connection.scheme>jdbc:mysql</hibernate.cfg.xml.connection.scheme>
     <hibernate.cfg.xml.connection.host>localhost</hibernate.cfg.xml.connection.host>
     <hibernate.cfg.xml.connection.port />
@@ -72,11 +74,14 @@
     <log4j.properties.monitorInterval>60</log4j.properties.monitorInterval>
   </properties>
   <dependencies>
-    <!-- Add here all your dependencies -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-web</artifactId>
     </dependency>
     <!--
       Make sure we provide a default implementation of slf4j for any test

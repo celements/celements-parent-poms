@@ -39,6 +39,8 @@
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.27</spring.version>
     <jersey.version>2.34</jersey.version>
+    <slf4j.version>1.7.36</slf4j.version>
+    <log4j.version>2.20.0</log4j.version>
   </properties>
   <dependencies>
   </dependencies>
@@ -772,11 +774,6 @@
       </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-scheduler</artifactId>
-        <version>1.25</version>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-application-manager</artifactId>
         <version>1.19</version>
       </dependency>
@@ -950,44 +947,46 @@
         <version>1.7.5</version>
       </dependency>
 
-
       <!-- Logging -->
-      <!-- log4j2 with 1.2-bridge -->
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-1.2-api</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-api</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-core</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
-      <!-- slf4j logging -->
+      <dependency>
+        <groupId>org.apache.logging.log4j</groupId>
+        <artifactId>log4j-web</artifactId>
+        <version>${log4j.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
         <artifactId>log4j-slf4j-impl</artifactId>
-        <version>2.17.2</version>
+        <version>${log4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>slf4j-api</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jul-to-slf4j</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
       <dependency>
         <groupId>org.slf4j</groupId>
         <artifactId>jcl-over-slf4j</artifactId>
-        <version>1.7.32</version>
+        <version>${slf4j.version}</version>
       </dependency>
 
       <!-- Testing -->
@@ -1042,7 +1041,7 @@
       <dependency>
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
-        <version>5.0.0</version>
+        <version>5.1.0</version>
       </dependency>
       <!-- Used to mock XWiki class -->
       <dependency>
@@ -1167,7 +1166,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.2.1</version>
+          <version>3.2.2</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1177,7 +1176,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.0.0</version>
+          <version>3.1.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1192,7 +1191,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.0</version>
+          <version>3.1.1</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1282,11 +1281,6 @@
       </plugins>
     </pluginManagement>
     <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ftp</artifactId>
-        <version>3.5.3</version>
-      </extension>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
         <artifactId>wagon-ssh-external</artifactId>
