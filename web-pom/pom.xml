@@ -57,7 +57,6 @@
     <xwiki.cfg.xwiki.db.prefix.celementsweb />
     <xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
     <xwiki.cfg.xwiki.url.protocol>http</xwiki.cfg.xwiki.url.protocol>
-    <xwiki.cfg.xwiki.url.host>localhost</xwiki.cfg.xwiki.url.host>
     <hibernate.cfg.xml.connection.scheme>jdbc:mysql</hibernate.cfg.xml.connection.scheme>
     <hibernate.cfg.xml.connection.host>localhost</hibernate.cfg.xml.connection.host>
     <hibernate.cfg.xml.connection.port />
