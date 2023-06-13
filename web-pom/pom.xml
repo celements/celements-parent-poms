@@ -47,8 +47,6 @@
     </license>
   </licenses>
   <properties>
-    <platform.core.version>1.0</platform.core.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <!--  default properties, can be overriden in profile -->
     <catalina.home>${env.CATALINA_HOME}</catalina.home>
     <xwiki.cfg.xwiki.store.migration.databases />

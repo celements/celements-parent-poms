@@ -34,8 +34,6 @@
     <tag>HEAD</tag>
   </scm>
   <properties>
-    <platform.core.version>1.0</platform.core.version>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.27</spring.version>
     <jersey.version>2.34</jersey.version>
@@ -1159,6 +1157,14 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
           <version>3.2.1</version>
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar-no-fork</goal>
+              </goals>
+            </execution>
+          </executions>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -1184,32 +1190,9 @@
           <artifactId>maven-compiler-plugin</artifactId>
           <version>3.11.0</version>
           <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-            <encoding>${project.build.sourceEncoding}</encoding>
+            <release>11</release>
+            <encoding>UTF-8</encoding>
           </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>aspectj-maven-plugin</artifactId>
-          <version>1.14.0</version>
-          <configuration>
-            <source>1.8</source>
-            <target>1.8</target>
-          </configuration>
-          <executions>
-            <execution>
-              <id>backward-compatibility-aspects</id>
-              <goals>
-                <goal>compile</goal>
-              </goals>
-              <configuration>
-                <aspectDirectory>src/main/aspect/compatibility</aspectDirectory>
-                <source>1.8</source>
-                <target>1.8</target>
-              </configuration>
-            </execution>
-          </executions>
         </plugin>
         <plugin>
           <groupId>com.jarslab.maven</groupId>
