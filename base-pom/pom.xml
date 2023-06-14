@@ -506,6 +506,10 @@
             <artifactId>quartz</artifactId>
           </exclusion>
           <exclusion>
+            <groupId>org.tallison</groupId>
+            <artifactId>metadata-extractor</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>org.slf4j</groupId>
             <artifactId>jul-to-slf4j</artifactId>
           </exclusion>
@@ -528,14 +532,25 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>asm</groupId>
-        <artifactId>asm</artifactId>
-        <version>1.5.3</version>
+        <!-- match version with tika-parsers -->
+        <groupId>org.tallison</groupId>
+        <artifactId>metadata-extractor</artifactId>
+        <version>2.15.0.1</version>
       </dependency>
       <dependency>
         <groupId>org.apache.pdfbox</groupId>
         <artifactId>jbig2-imageio</artifactId>
         <version>3.0.3</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.avalon.framework</groupId>
+        <artifactId>avalon-framework-api</artifactId>
+        <version>4.3.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.avalon.framework</groupId>
+        <artifactId>avalon-framework-impl</artifactId>
+        <version>4.3.1</version>
       </dependency>
       <dependency>
         <groupId>com.github.jai-imageio</groupId>
@@ -1104,11 +1119,6 @@
         <groupId>org.jsoup</groupId>
         <artifactId>jsoup</artifactId>
         <version>1.15.3</version>
-      </dependency>
-      <dependency>
-        <groupId>info.informatica</groupId>
-        <artifactId>jclf</artifactId>
-        <version>3.1.0</version>
       </dependency>
       <dependency>
         <groupId>xalan</groupId>
