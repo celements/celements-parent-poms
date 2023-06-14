@@ -808,6 +808,12 @@
       </dependency>
 
       <!-- XML processing -->
+      <!-- JAXB -->
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>3.0.1</version>
+      </dependency>
       <dependency>
         <!-- XML API [CELDEV-808] -->
         <groupId>xml-apis</groupId>
