@@ -280,12 +280,6 @@
       <artifactId>javax.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
-      <!-- XML API [CELDEV-808] -->
-    <dependency>
-      <groupId>xml-apis</groupId>
-      <artifactId>xml-apis</artifactId>
-      <scope>provided</scope>
-    </dependency>
     <!-- JAX-RS implementation -->
     <dependency>
       <groupId>org.glassfish.jersey.core</groupId>
