@@ -49,8 +49,6 @@
   <properties>
     <!--  default properties, can be overriden in profile -->
     <catalina.home>${env.CATALINA_HOME}</catalina.home>
-    <xwiki.cfg.xwiki.store.migration.databases />
-    <xwiki.cfg.xwiki.virtual>0</xwiki.cfg.xwiki.virtual>
     <xwiki.cfg.xwiki.db>main</xwiki.cfg.xwiki.db>
     <xwiki.cfg.xwiki.db.prefix.celementsweb />
     <xwiki.cfg.xwiki.db.prefix>${xwiki.cfg.xwiki.db.prefix.celementsweb}</xwiki.cfg.xwiki.db.prefix>
@@ -192,8 +190,6 @@
         <selenium.password>${selenium.password.celementsweb}</selenium.password>
         <catalina.home.celementsweb>${env.CATALINA_HOME}</catalina.home.celementsweb>
         <catalina.home>${catalina.home.celementsweb}</catalina.home>
-        <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
-        <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
         <xwiki.cfg.xwiki.db.prefix.celementsweb>test_cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
         <hibernate.cfg.xml.connection.username>test_selenium</hibernate.cfg.xml.connection.username>
         <hibernate.cfg.xml.connection.password>test_cel_selenium</hibernate.cfg.xml.connection.password>
@@ -378,9 +374,7 @@
       -->
       <id>local</id>
       <properties>
-        <xwiki.cfg.xwiki.store.migration.databases>all</xwiki.cfg.xwiki.store.migration.databases>
-        <xwiki.cfg.xwiki.virtual>1</xwiki.cfg.xwiki.virtual>
-            <xwiki.cfg.xwiki.db.prefix.celementsweb>cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
+        <xwiki.cfg.xwiki.db.prefix.celementsweb>cel_</xwiki.cfg.xwiki.db.prefix.celementsweb>
       </properties>
     </profile>
     <profile>

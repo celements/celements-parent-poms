@@ -36,7 +36,7 @@
   <properties>
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.27</spring.version>
-    <jersey.version>2.34</jersey.version>
+    <jersey.version>2.39.1</jersey.version>
     <slf4j.version>1.7.36</slf4j.version>
     <log4j.version>2.20.0</log4j.version>
   </properties>
@@ -506,6 +506,10 @@
             <artifactId>quartz</artifactId>
           </exclusion>
           <exclusion>
+            <groupId>org.tallison</groupId>
+            <artifactId>metadata-extractor</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>org.slf4j</groupId>
             <artifactId>jul-to-slf4j</artifactId>
           </exclusion>
@@ -528,14 +532,25 @@
         </exclusions>
       </dependency>
       <dependency>
-        <groupId>asm</groupId>
-        <artifactId>asm</artifactId>
-        <version>1.5.3</version>
+        <!-- match version with tika-parsers -->
+        <groupId>org.tallison</groupId>
+        <artifactId>metadata-extractor</artifactId>
+        <version>2.15.0.1</version>
       </dependency>
       <dependency>
         <groupId>org.apache.pdfbox</groupId>
         <artifactId>jbig2-imageio</artifactId>
         <version>3.0.3</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.avalon.framework</groupId>
+        <artifactId>avalon-framework-api</artifactId>
+        <version>4.3.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.avalon.framework</groupId>
+        <artifactId>avalon-framework-impl</artifactId>
+        <version>4.3.1</version>
       </dependency>
       <dependency>
         <groupId>com.github.jai-imageio</groupId>
@@ -808,6 +823,12 @@
       </dependency>
 
       <!-- XML processing -->
+      <!-- JAXB -->
+      <dependency>
+        <groupId>jakarta.xml.bind</groupId>
+        <artifactId>jakarta.xml.bind-api</artifactId>
+        <version>3.0.1</version>
+      </dependency>
       <dependency>
         <!-- XML API [CELDEV-808] -->
         <groupId>xml-apis</groupId>
@@ -1098,11 +1119,6 @@
         <groupId>org.jsoup</groupId>
         <artifactId>jsoup</artifactId>
         <version>1.15.3</version>
-      </dependency>
-      <dependency>
-        <groupId>info.informatica</groupId>
-        <artifactId>jclf</artifactId>
-        <version>3.1.0</version>
       </dependency>
       <dependency>
         <groupId>xalan</groupId>
