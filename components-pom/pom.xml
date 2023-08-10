@@ -24,7 +24,7 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>6.0-SNAPSHOT</version>
+    <version>6.0</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
@@ -44,7 +44,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-commons</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -52,43 +52,43 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-component</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-config-source-api</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-config-source</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-reference</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-servlet</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-observation</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>provided</scope>
     </dependency>
 
@@ -362,7 +362,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-shared-tests</artifactId>
-      <version>6.0-SNAPSHOT</version>
+      <version>6.0</version>
       <scope>test</scope>
       <exclusions>
         <exclusion>
