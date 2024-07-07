@@ -52,7 +52,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>6.0</version>
+      <version>6.2-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -238,10 +238,12 @@
       <artifactId>streamex</artifactId>
     </dependency>
     <dependency>
+      <!-- TODO replace with fasterxml.jackson -->
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-core-lgpl</artifactId>
     </dependency>
     <dependency>
+      <!-- TODO replace with fasterxml.jackson -->
       <groupId>org.codehaus.jackson</groupId>
       <artifactId>jackson-mapper-lgpl</artifactId>
     </dependency>
