@@ -800,7 +800,7 @@
       <dependency>
         <groupId>jakarta.ws.rs</groupId>
         <artifactId>jakarta.ws.rs-api</artifactId>
-        <version>4.0.0</version>
+        <version>2.1.6</version> <!-- 4.0.0 requires JDK 17, therefore fallback to 2.1.6 -->
       </dependency>
       <dependency>
         <!-- TODO [CELDEV-815] Upgrade to javax.servlet Spec 4.0 -->
