@@ -35,7 +35,7 @@
   </scm>
   <properties>
     <xwiki.version>2.7.2</xwiki.version>
-    <spring.version>5.3.27</spring.version>
+    <spring.version>5.3.39</spring.version>
     <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
     Do not upgrade to Spring Security 6+ as long as staying on Spring 5.3. -->
     <spring.security.version>5.7.14</spring.security.version>
