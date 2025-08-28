@@ -545,6 +545,10 @@
             <groupId>jdom</groupId>
             <artifactId>jdom</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -857,6 +861,11 @@
         <groupId>jakarta.xml.bind</groupId>
         <artifactId>jakarta.xml.bind-api</artifactId>
         <version>3.0.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.glassfish.jaxb</groupId>
+        <artifactId>jaxb-runtime</artifactId>
+        <version>3.0.2</version>
       </dependency>
       <dependency>
         <groupId>xpp3</groupId>
