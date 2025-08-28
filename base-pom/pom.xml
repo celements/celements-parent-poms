@@ -39,7 +39,7 @@
     <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
     Do not upgrade to Spring Security 6+ as long as staying on Spring 5.3. -->
     <spring.security.version>5.7.14</spring.security.version>
-    <jersey.version>3.0.18</jersey.version>
+    <jersey.version>2.47</jersey.version>
     <slf4j.version>1.7.36</slf4j.version>
     <log4j.version>2.20.0</log4j.version>
   </properties>
