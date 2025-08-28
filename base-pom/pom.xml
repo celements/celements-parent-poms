@@ -42,6 +42,7 @@
     <jersey.version>2.47</jersey.version>
     <slf4j.version>1.7.36</slf4j.version>
     <log4j.version>2.20.0</log4j.version>
+    <springdoc-openapi.version>1.8.0</springdoc-openapi.version>
   </properties>
   <dependencies>
   </dependencies>
