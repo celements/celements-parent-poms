@@ -20,7 +20,9 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  *
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>base-pom</artifactId>
@@ -39,10 +41,12 @@
     <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
     Do not upgrade to Spring Security 6+ as long as staying on Spring 5.3. -->
     <spring.security.version>5.7.14</spring.security.version>
+    <jackson.version>2.17.1</jackson.version>
     <jersey.version>2.47</jersey.version>
     <slf4j.version>1.7.36</slf4j.version>
     <log4j.version>2.20.0</log4j.version>
     <springdoc-openapi.version>1.8.0</springdoc-openapi.version>
+    <nodejs.version>v24.11.1</nodejs.version>
   </properties>
   <dependencies>
   </dependencies>
@@ -509,12 +513,12 @@
             <artifactId>asm</artifactId>
           </exclusion>
           <exclusion>
-          <!--  exclude CXF since we're already including Jersey as JAX-RS implementation -->
+            <!--  exclude CXF since we're already including Jersey as JAX-RS implementation -->
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-client</artifactId>
           </exclusion>
           <exclusion>
-          <!--  exclude quartz since we're already including it in celements-scheduler -->
+            <!--  exclude quartz since we're already including it in celements-scheduler -->
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
           </exclusion>
@@ -633,7 +637,8 @@
         <version>0.4.2</version>
       </dependency>
 
-    <!-- JTidy Has been picked up at https://github.com/jtidy/jtidy and immediately was reabandoned.
+      <!-- JTidy Has been picked up at https://github.com/jtidy/jtidy and immediately was
+      reabandoned.
       However their release from Dec 2019 has at least some HTML5 support -->
       <dependency>
         <groupId>com.github.jtidy</groupId>
@@ -1245,6 +1250,45 @@
           </configuration>
         </plugin>
         <plugin>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <version>1.15.4</version>
+          <configuration>
+            <installDirectory>target</installDirectory>
+            <workingDirectory>.</workingDirectory>
+            <nodeVersion>${nodejs.version}</nodeVersion>
+          </configuration>
+          <executions>
+            <execution>
+              <id>install node and npm</id>
+              <goals>
+                <goal>install-node-and-npm</goal>
+              </goals>
+              <phase>generate-resources</phase>
+            </execution>
+            <execution>
+              <id>npm install</id>
+              <goals>
+                <goal>npm</goal>
+              </goals>
+              <phase>generate-resources</phase>
+              <configuration>
+                <arguments>install</arguments>
+              </configuration>
+            </execution>
+            <execution>
+              <id>npm build</id>
+              <goals>
+                <goal>npm</goal>
+              </goals>
+              <phase>generate-resources</phase>
+              <configuration>
+                <arguments>run build</arguments>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+        <plugin>
           <groupId>com.jarslab.maven</groupId>
           <artifactId>babel-maven-plugin</artifactId>
           <version>1.6</version>
@@ -1267,22 +1311,18 @@
                 <verbose>true</verbose>
                 <threads>3</threads>
                 <encoding>UTF-8</encoding>
-                <babelSrc>${project.basedir}/babel-jslib/babel.min.js</babelSrc>
+                <babelSrc>${project.basedir}/node_modules/@babel/standalone/babel.min.js</babelSrc>
                 <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
-                <targetDir>${project.basedir}/target/${project.build.finalName}/resources/</targetDir>
+                <targetDir>${project.build.directory}/${project.build.finalName}/resources/</targetDir>
                 <jsIncludes>
                   <jsInclude>**/*.mjs</jsInclude>
                 </jsIncludes>
+                <jsExcludes>
+                  <jsExclude>dist/**</jsExclude>
+                </jsExcludes>
                 <formatPresets>false</formatPresets>
                 <presets>
-                  [ "env",
-                    {
-                      "modules": false,
-                      "targets": {
-                        "esmodules": true
-                      }
-                    }
-                  ]
+                  ["env", {"modules": false, "targets": {"esmodules": true}}]
                 </presets>
               </configuration>
             </execution>
