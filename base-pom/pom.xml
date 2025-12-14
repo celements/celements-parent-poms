@@ -41,6 +41,7 @@
     <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
     Do not upgrade to Spring Security 6+ as long as staying on Spring 5.3. -->
     <spring.security.version>5.7.14</spring.security.version>
+    <spring.kafka.version>2.9.13</spring.kafka.version>
     <jackson.version>2.17.1</jackson.version>
     <jersey.version>2.47</jersey.version>
     <slf4j.version>1.7.36</slf4j.version>
@@ -316,10 +317,6 @@
         <artifactId>xwiki-core-cache-jbosscache</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
-          <exclusion>
-            <groupId>jgroups</groupId>
-            <artifactId>jgroups</artifactId>
-          </exclusion>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>*</artifactId>
