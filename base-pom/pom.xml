@@ -1233,6 +1233,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.5.1</version>
+          <configuration>
+            <resourceEncoding>UTF-8</resourceEncoding>
+          </configuration>
         </plugin>
         <plugin>
           <artifactId>maven-release-plugin</artifactId>
