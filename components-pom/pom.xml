@@ -167,6 +167,12 @@
       <artifactId>spring-webmvc</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+      <version>${spring.kafka.version}</version>
+      <scope>provided</scope>
+    </dependency>
 
     <dependency>
       <groupId>radeox</groupId>
