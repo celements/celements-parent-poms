@@ -49,6 +49,7 @@
     <log4j.version>2.20.0</log4j.version>
     <springdoc-openapi.version>1.8.0</springdoc-openapi.version>
     <nodejs.version>v24.11.1</nodejs.version>
+    <repo.url.celements>http://maven.celements.ch</repo.url.celements>
   </properties>
   <dependencies>
   </dependencies>
@@ -1182,7 +1183,7 @@
   </dependencyManagement>
   <organization>
     <name>synventis gmbh</name>
-    <url>http://www.synventis.com</url>
+    <url>https://www.synventis.com</url>
   </organization>
   <build>
     <pluginManagement>
@@ -1342,9 +1343,8 @@
   <repositories>
     <repository>
       <id>xwiki-externals</id>
-      <name>XWiki Maven2 Remote Repository for Third Party Dependencies
-          </name>
-      <url>http://maven.xwiki.org/externals</url>
+      <name>XWiki Maven2 Remote Repository for Third Party Dependencies</name>
+      <url>https://maven.xwiki.org/externals</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1355,7 +1355,7 @@
     <repository>
       <id>xwiki-releases</id>
       <name>XWiki Maven2 Remote Repository for Releases</name>
-      <url>http://maven.xwiki.org/releases</url>
+      <url>https://maven.xwiki.org/releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1366,7 +1366,7 @@
     <repository>
       <id>xwiki-snapshots</id>
       <name>XWiki Maven2 Remote Repository for Snapshots</name>
-      <url>http://maven.xwiki.org/snapshots</url>
+      <url>https://maven.xwiki.org/snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -1377,7 +1377,7 @@
     <repository>
       <id>celements-externals</id>
       <name>Celements Maven2 Remote Repository for Third Party Dependencies</name>
-      <url>http://maven.celements.ch/externals</url>
+      <url>${repo.url.celements}/externals</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1388,7 +1388,7 @@
     <repository>
       <id>celements-releases</id>
       <name>Celements Maven2 Remote Repository for Releases</name>
-      <url>http://maven.celements.ch/releases</url>
+      <url>${repo.url.celements}/releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1399,7 +1399,7 @@
     <repository>
       <id>celements-snapshots</id>
       <name>Celements Maven2 Remote Repository for Snapshots</name>
-      <url>http://maven.celements.ch/snapshots</url>
+      <url>${repo.url.celements}/snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -1422,9 +1422,8 @@
   <pluginRepositories>
     <pluginRepository>
       <id>xwiki-plugins-externals</id>
-      <name>XWiki Maven2 Plugin Remote Repository for Third Party Plugins
-          </name>
-      <url>http://maven.xwiki.org/externals</url>
+      <name>XWiki Maven2 Plugin Remote Repository for Third Party Plugins</name>
+      <url>https://maven.xwiki.org/externals</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1435,7 +1434,7 @@
     <pluginRepository>
       <id>xwiki-plugins-releases</id>
       <name>XWiki Maven2 Plugin Remote Repository for Releases</name>
-      <url>http://maven.xwiki.org/releases</url>
+      <url>https://maven.xwiki.org/releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -1446,7 +1445,7 @@
     <pluginRepository>
       <id>xwiki-plugins-snapshots</id>
       <name>XWiki Maven2 Plugin Remote Repository for Snapshots</name>
-      <url>http://maven.xwiki.org/snapshots</url>
+      <url>https://maven.xwiki.org/snapshots</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -1468,13 +1467,13 @@
   </profiles>
   <distributionManagement>
     <snapshotRepository>
-      <id>ssh-snapshot-repository</id>
-      <url>scpexe://maven.celements.ch/var/www-celements/snapshots</url>
+      <id>celements-snapshot-repository</id>
+      <url>${repo.url.dist.celements}/snapshots</url>
       <uniqueVersion>true</uniqueVersion>
     </snapshotRepository>
     <repository>
-      <id>ssh-release-repository</id>
-      <url>scpexe://maven.celements.ch/var/www-celements/releases</url>
+      <id>celements-release-repository</id>
+      <url>${repo.url.dist.celements}/releases</url>
       <uniqueVersion>true</uniqueVersion>
     </repository>
   </distributionManagement>
