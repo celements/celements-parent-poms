@@ -24,11 +24,11 @@
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
-    <version>6.4-SNAPSHOT</version>
+    <version>6.4</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
   <artifactId>celements</artifactId>
-  <version>6.7-SNAPSHOT</version>
+  <version>6.8-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements Main POM</description>
   <scm>
@@ -52,7 +52,7 @@
     <dependency>
       <groupId>com.celements</groupId>
       <artifactId>celements-xwiki-core</artifactId>
-      <version>6.9</version>
+      <version>6.10</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -165,6 +165,12 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.kafka</groupId>
+      <artifactId>spring-kafka</artifactId>
+      <version>${spring.kafka.version}</version>
       <scope>provided</scope>
     </dependency>
 
@@ -398,7 +404,7 @@
           <artifactId>maven-surefire-plugin</artifactId>
           <!-- XWiki rule is to put test in *Test classes -->
           <configuration>
-<!--  add-opens argLine is used on jvm >= 17 -> remove space between - -
+            <!--  add-opens argLine is used on jvm >= 17 -> remove space between - -
             <argLine>
                 - -add-opens java.base/java.lang=ALL-UNNAMED
             </argLine> -->
