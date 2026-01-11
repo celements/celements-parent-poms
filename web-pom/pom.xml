@@ -22,7 +22,9 @@
  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>base-pom</artifactId>
@@ -56,8 +58,10 @@
     <hibernate.cfg.xml.connection.scheme>jdbc:mysql</hibernate.cfg.xml.connection.scheme>
     <hibernate.cfg.xml.connection.host>localhost</hibernate.cfg.xml.connection.host>
     <hibernate.cfg.xml.connection.port />
-    <hibernate.cfg.xml.connection.query>?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''&amp;amp;usePipelineAuth=false&amp;amp;disablePipeline=true</hibernate.cfg.xml.connection.query>
-    <hibernate.cfg.xml.connection.url>${hibernate.cfg.xml.connection.scheme}://${hibernate.cfg.xml.connection.host}${hibernate.cfg.xml.connection.port}/${xwiki.cfg.xwiki.db.prefix}${xwiki.cfg.xwiki.db}${hibernate.cfg.xml.connection.query}</hibernate.cfg.xml.connection.url>
+    <hibernate.cfg.xml.connection.query>
+      ?useServerPrepStmts=false&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;sessionVariables=sql_mode=''&amp;amp;usePipelineAuth=false&amp;amp;disablePipeline=true</hibernate.cfg.xml.connection.query>
+    <hibernate.cfg.xml.connection.url>
+      ${hibernate.cfg.xml.connection.scheme}://${hibernate.cfg.xml.connection.host}${hibernate.cfg.xml.connection.port}/${xwiki.cfg.xwiki.db.prefix}${xwiki.cfg.xwiki.db}${hibernate.cfg.xml.connection.query}</hibernate.cfg.xml.connection.url>
     <hibernate.cfg.xml.connection.username>xwiki</hibernate.cfg.xml.connection.username>
     <hibernate.cfg.xml.connection.password>xwiki</hibernate.cfg.xml.connection.password>
     <hibernate.cfg.xml.connection.driver_class>com.mysql.jdbc.Driver</hibernate.cfg.xml.connection.driver_class>
@@ -139,7 +143,7 @@
               </excludes>
             </resource>
           </webResources>
-    </configuration>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -197,7 +201,7 @@
       <activation>
         <activeByDefault>false</activeByDefault>
       </activation>
-       <dependencies>
+      <dependencies>
         <dependency>
           <groupId>com.celements</groupId>
           <artifactId>celements-shared-tests</artifactId>
@@ -206,7 +210,7 @@
         </dependency>
       </dependencies>
       <build>
-         <resources>
+        <resources>
           <resource>
             <directory>src/test/seleniumconfig</directory>
             <includes>
@@ -219,30 +223,30 @@
           <plugin>
             <groupId>org.codehaus.cargo</groupId>
             <artifactId>cargo-maven2-plugin</artifactId>
-                  <executions>
-                    <execution>
-                      <id>start-container</id>
-                      <phase>pre-integration-test</phase>
-                      <goals>
-                        <goal>start</goal>
-                    <!--
+            <executions>
+              <execution>
+                <id>start-container</id>
+                <phase>pre-integration-test</phase>
+                <goals>
+                  <goal>start</goal>
+                  <!--
                         <goal>deployer-undeploy</goal>
                         <goal>deployer-deploy</goal>
                     -->
-                      </goals>
-                    </execution>
-                    <!--
+                </goals>
+              </execution>
+              <!--
                       uncomment if you want to stop the container after
                       integration-test
                     -->
-                    <execution>
-                      <id>stop-container</id>
-                      <phase>post-integration-test</phase>
-                      <goals>
-                        <goal>stop</goal>
-                      </goals>
-                   </execution>
-                  </executions>
+              <execution>
+                <id>stop-container</id>
+                <phase>post-integration-test</phase>
+                <goals>
+                  <goal>stop</goal>
+                </goals>
+              </execution>
+            </executions>
             <configuration>
               <!-- Container configuration -->
               <container>
@@ -253,9 +257,9 @@
               <deployer>
                 <deployables>
                   <deployable>
-                      <properties>
-                          <context>ROOT</context>
-                      </properties>
+                    <properties>
+                      <context>ROOT</context>
+                    </properties>
                   </deployable>
                 </deployables>
               </deployer>
@@ -268,9 +272,9 @@
                 </properties>
                 <deployables>
                   <deployable>
-                      <properties>
-                          <context>ROOT</context>
-                      </properties>
+                    <properties>
+                      <context>ROOT</context>
+                    </properties>
                   </deployable>
                 </deployables>
               </configuration>
@@ -294,7 +298,7 @@
                 </goals>
                 <configuration>
                   <background>true</background>
-            <!--
+                  <!--
                           <browserSessionReuse>true</browserSessionReuse>
 -->
                   <logOutput>true</logOutput>
