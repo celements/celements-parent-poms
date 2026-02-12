@@ -318,6 +318,10 @@
             <artifactId>xwiki-core-action</artifactId>
           </exclusion>
           <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-velocity</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
           </exclusion>
@@ -401,6 +405,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-velocity</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -1116,6 +1124,11 @@
             <artifactId>junit</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib</artifactId>
+        <version>3.3.0</version>
       </dependency>
       <dependency>
         <groupId>jmock</groupId>
