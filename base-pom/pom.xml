@@ -62,6 +62,12 @@
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-properties</artifactId>
         <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
@@ -71,6 +77,10 @@
           <exclusion>
             <groupId>jdom</groupId>
             <artifactId>jdom</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -306,12 +316,27 @@
             <artifactId>xwiki-core-action</artifactId>
           </exclusion>
           <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-velocity</artifactId>
+          </exclusion>
+          <exclusion>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
           </exclusion>
           <exclusion>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-management</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -378,6 +403,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-model</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-velocity</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -501,8 +530,8 @@
         <version>1.28.5</version>
       </dependency>
       <dependency>
-        <!-- IMPORTANT: includes transitive dependency 'poi-ooxml-4.0.1'
-          on tika upgrade match other existing versions accordingly -->
+        <!-- IMPORTANT: includes transitive dependency 'poi-ooxml-4.0.1' on tika upgrade match other
+        existing versions accordingly -->
         <groupId>org.apache.tika</groupId>
         <artifactId>tika-parsers</artifactId>
         <version>1.28.5</version>
@@ -638,8 +667,7 @@
       </dependency>
 
       <!-- JTidy Has been picked up at https://github.com/jtidy/jtidy and immediately was
-      reabandoned.
-      However their release from Dec 2019 has at least some HTML5 support -->
+      reabandoned. However their release from Dec 2019 has at least some HTML5 support -->
       <dependency>
         <groupId>com.github.jtidy</groupId>
         <artifactId>jtidy</artifactId>
@@ -1031,6 +1059,10 @@
         <exclusions>
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-configuration-api</artifactId>
           </exclusion>
           <exclusion>
@@ -1083,6 +1115,11 @@
             <artifactId>junit</artifactId>
           </exclusion>
         </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>cglib</groupId>
+        <artifactId>cglib</artifactId>
+        <version>3.3.0</version>
       </dependency>
       <dependency>
         <groupId>jmock</groupId>
@@ -1314,9 +1351,11 @@
                 <verbose>true</verbose>
                 <threads>3</threads>
                 <encoding>UTF-8</encoding>
-                <babelSrc>${project.basedir}/node_modules/@babel/standalone/babel.min.js</babelSrc>
+                <babelSrc>
+                  ${project.basedir}/node_modules/@babel/standalone/babel.min.js</babelSrc>
                 <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
-                <targetDir>${project.build.directory}/${project.build.finalName}/resources/</targetDir>
+                <targetDir>
+                  ${project.build.directory}/${project.build.finalName}/resources/</targetDir>
                 <jsIncludes>
                   <jsInclude>**/*.mjs</jsInclude>
                 </jsIncludes>
@@ -1411,7 +1450,8 @@
     <repository>
       <id>jboss-thirdparty-releases</id>
       <name>JBoss Thirdparty Releases</name>
-      <url>https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
+      <url>
+        https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
