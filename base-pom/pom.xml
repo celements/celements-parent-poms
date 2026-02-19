@@ -40,8 +40,7 @@
     <java.version>21</java.version>
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.39</spring.version>
-    <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with
-    Spring 5.3.
+    <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
     Do not upgrade to Spring Security 6+ as long as staying on Spring 5.3. -->
     <spring.security.version>5.7.14</spring.security.version>
     <spring.kafka.version>2.9.13</spring.kafka.version>
@@ -202,8 +201,7 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
-          <!-- [CELDEV-808] exclude xml-apis since it's included in different
-          versions -->
+          <!-- [CELDEV-808] exclude xml-apis since it's included in different versions -->
           <exclusion>
             <groupId>xml-apis</groupId>
             <artifactId>xml-apis</artifactId>
@@ -532,8 +530,8 @@
         <version>1.28.5</version>
       </dependency>
       <dependency>
-        <!-- IMPORTANT: includes transitive dependency 'poi-ooxml-4.0.1'
-          on tika upgrade match other existing versions accordingly -->
+        <!-- IMPORTANT: includes transitive dependency 'poi-ooxml-4.0.1' on tika upgrade match other
+        existing versions accordingly -->
         <groupId>org.apache.tika</groupId>
         <artifactId>tika-parsers</artifactId>
         <version>1.28.5</version>
@@ -544,14 +542,12 @@
             <artifactId>asm</artifactId>
           </exclusion>
           <exclusion>
-            <!--  exclude CXF since we're already including Jersey as JAX-RS
-            implementation -->
+            <!--  exclude CXF since we're already including Jersey as JAX-RS implementation -->
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-client</artifactId>
           </exclusion>
           <exclusion>
-            <!--  exclude quartz since we're already including it in
-            celements-scheduler -->
+            <!--  exclude quartz since we're already including it in celements-scheduler -->
             <groupId>org.quartz-scheduler</groupId>
             <artifactId>quartz</artifactId>
           </exclusion>
@@ -657,8 +653,7 @@
         </exclusions>
       </dependency>
 
-      <!-- The JRCS JARS are are in our repo till we get them published on the
-      central repository.
+      <!-- The JRCS JARS are are in our repo till we get them published on the central repository.
            JRCS home page: http://www.suigeneris.org/kb/display/jrcs/JRCS+Home -->
       <dependency>
         <groupId>org.suigeneris</groupId>
@@ -671,10 +666,8 @@
         <version>0.4.2</version>
       </dependency>
 
-      <!-- JTidy Has been picked up at https://github.com/jtidy/jtidy and
-      immediately was
-      reabandoned.
-      However their release from Dec 2019 has at least some HTML5 support -->
+      <!-- JTidy Has been picked up at https://github.com/jtidy/jtidy and immediately was
+      reabandoned. However their release from Dec 2019 has at least some HTML5 support -->
       <dependency>
         <groupId>com.github.jtidy</groupId>
         <artifactId>jtidy</artifactId>
@@ -798,8 +791,7 @@
         <version>3.0.2</version>
       </dependency>
       <dependency>
-        <!-- A small collection of Stream utilities for Java 8. May be removed
-        in 9+ -->
+        <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
         <groupId>com.codepoetics</groupId>
         <artifactId>protonpack</artifactId>
         <version>1.16</version>
@@ -846,8 +838,7 @@
       <dependency>
         <groupId>jakarta.ws.rs</groupId>
         <artifactId>jakarta.ws.rs-api</artifactId>
-        <version>3.1.0</version> <!-- 4.0.0 requires JDK 17, therefore fallback
-        to 3.1.0 -->
+        <version>3.1.0</version> <!-- 4.0.0 requires JDK 17, therefore fallback to 3.1.0 -->
       </dependency>
       <dependency>
         <!-- TODO [CELDEV-815] Upgrade to javax.servlet Spec 4.0 -->
