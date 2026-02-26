@@ -20,8 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  *
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
 >
   <modelVersion>4.0.0</modelVersion>
@@ -81,49 +80,6 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-velocity</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>jdom</groupId>
-            <artifactId>jdom</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>commons-collections</groupId>
-            <artifactId>commons-collections</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-configuration-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-container-servlet</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-default</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -190,31 +146,6 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
-        <artifactId>xwiki-core-rendering-api</artifactId>
-        <version>${xwiki.version}</version>
-        <exclusions>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-configuration-api</artifactId>
-          </exclusion>
-          <exclusion>
-            <groupId>org.xwiki.platform</groupId>
-            <artifactId>xwiki-core-component-api</artifactId>
-          </exclusion>
-          <!-- [CELDEV-808] exclude xml-apis since it's included in different versions -->
-          <exclusion>
-            <groupId>xml-apis</groupId>
-            <artifactId>xml-apis</artifactId>
-          </exclusion>
-          <!-- we manage dom4j versions [CELDEV-927] -->
-          <exclusion>
-            <groupId>dom4j</groupId>
-            <artifactId>dom4j</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
-      <dependency>
-        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-rendering-xwiki</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -225,6 +156,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-rendering-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -381,6 +316,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-rendering-api</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -407,6 +346,10 @@
           <exclusion>
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-velocity</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-rendering-api</artifactId>
           </exclusion>
         </exclusions>
       </dependency>
@@ -1270,6 +1213,11 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.5.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-war-plugin</artifactId>
           <version>3.5.1</version>
           <configuration>
@@ -1370,8 +1318,40 @@
             </execution>
           </executions>
         </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <version>3.5.0</version>
+        </plugin>
       </plugins>
     </pluginManagement>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-banned-dependencies</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <bannedDependencies>
+                  <excludes>
+                    <exclude>org.xwiki.platform:xwiki-core-velocity</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-rendering-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
+                  </excludes>
+                  <message>Direct or transitive dependency on a banned artifact was detected.</message>
+                </bannedDependencies>
+              </rules>
+              <fail>true</fail>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
     <extensions>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>

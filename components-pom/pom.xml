@@ -99,6 +99,12 @@
       <version>7.0-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.celements</groupId>
+      <artifactId>celements-xwiki-rendering-api</artifactId>
+      <version>7.0-SNAPSHOT</version>
+      <scope>provided</scope>
+    </dependency>
 
     <!-- XWiki -->
     <dependency>
@@ -109,11 +115,6 @@
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-core-bridge</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-rendering-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
