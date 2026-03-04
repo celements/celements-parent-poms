@@ -141,11 +141,6 @@
     <!-- XWiki Plugins -->
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-mailsender</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-skinx</artifactId>
       <scope>provided</scope>
     </dependency>

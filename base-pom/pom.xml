@@ -1342,6 +1342,12 @@
                     <exclude>org.xwiki.platform:xwiki-core-velocity</exclude>
                     <exclude>org.xwiki.platform:xwiki-core-rendering-api</exclude>
                     <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
+                    <exclude>com.xpn.xwiki.platform.plugins:xwiki-plugin-mailsender</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-rendering-xwiki</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-context</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-observation-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core</exclude>
                   </excludes>
                   <message>Direct or transitive dependency on a banned artifact was detected.</message>
                 </bannedDependencies>
