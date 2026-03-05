@@ -1351,6 +1351,7 @@
                     <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
                     <exclude>org.xwiki.platform:xwiki-core-observation-api</exclude>
                     <exclude>org.xwiki.platform:xwiki-core</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-xml</exclude>
                     <exclude>commons-logging:commons-logging</exclude>
                   </excludes>
                   <message>Direct or transitive dependency on a banned artifact was detected.</message>
