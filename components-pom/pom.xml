@@ -138,13 +138,6 @@
       <scope>provided</scope>
     </dependency>
 
-    <!-- XWiki Plugins -->
-    <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-skinx</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
     <!-- Spring -->
     <dependency>
       <groupId>org.springframework</groupId>
