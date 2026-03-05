@@ -749,23 +749,6 @@
         <version>0.8.1</version>
       </dependency>
 
-      <!-- XWiki Plugins -->
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-mailsender</artifactId>
-        <version>1.17</version>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-skinx</artifactId>
-        <version>1.19</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-application-manager</artifactId>
