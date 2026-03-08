@@ -81,6 +81,10 @@
             <groupId>org.xwiki.platform</groupId>
             <artifactId>xwiki-core-component-api</artifactId>
           </exclusion>
+          <exclusion>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
@@ -745,23 +749,6 @@
         <version>0.8.1</version>
       </dependency>
 
-      <!-- XWiki Plugins -->
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-mailsender</artifactId>
-        <version>1.17</version>
-      </dependency>
-      <dependency>
-        <groupId>com.xpn.xwiki.platform.plugins</groupId>
-        <artifactId>xwiki-plugin-skinx</artifactId>
-        <version>1.19</version>
-        <exclusions>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
-        </exclusions>
-      </dependency>
       <dependency>
         <groupId>com.xpn.xwiki.platform.plugins</groupId>
         <artifactId>xwiki-plugin-application-manager</artifactId>
@@ -1342,6 +1329,14 @@
                     <exclude>org.xwiki.platform:xwiki-core-velocity</exclude>
                     <exclude>org.xwiki.platform:xwiki-core-rendering-api</exclude>
                     <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-rendering-xwiki</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-observation-api</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core</exclude>
+                    <exclude>org.xwiki.platform:xwiki-core-xml</exclude>
+                    <exclude>com.xpn.xwiki.platform.plugins:xwiki-plugin-mailsender</exclude>
+                    <exclude>com.xpn.xwiki.platform.plugins:xwiki-plugin-skinx</exclude>
+                    <exclude>commons-logging:commons-logging</exclude>
                   </excludes>
                   <message>Direct or transitive dependency on a banned artifact was detected.</message>
                 </bannedDependencies>
