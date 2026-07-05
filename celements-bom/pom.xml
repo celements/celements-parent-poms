@@ -302,6 +302,11 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
+        <artifactId>celements-wiki-api</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
         <artifactId>celements-wiki-manager</artifactId>
         <version>${release.version}</version>
       </dependency>
