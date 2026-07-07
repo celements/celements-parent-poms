@@ -9,6 +9,7 @@
     <version>7.1-SNAPSHOT</version>
   </parent>
   <artifactId>celements-bom</artifactId>
+  <version>7.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements BOM</description>
   <properties>
