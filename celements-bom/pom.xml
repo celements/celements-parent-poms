@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
- *
- * See the NOTICE file distributed with this work for additional
- * information regarding copyright ownership.
- *
- * This is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as
- * published by the Free Software Foundation; either version 2.1 of
- * the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
- *
--->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.celements</groupId>
-  <artifactId>base-pom</artifactId>
+  <parent>
+    <groupId>com.celements</groupId>
+    <artifactId>celements-parent-poms</artifactId>
+    <version>7.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>celements-bom</artifactId>
   <version>7.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <description>Celements Master Root POM</description>
-  <scm>
-    <connection>scm:git:git://github.com/celements/parent-poms</connection>
-    <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
-    <url>https://github.com/celements/parent-poms</url>
-    <tag>HEAD</tag>
-  </scm>
+  <description>Celements BOM</description>
   <properties>
-    <java.version>21</java.version>
+    <release.version>${project.version}</release.version>
     <xwiki.version>2.7.2</xwiki.version>
     <spring.version>5.3.39</spring.version>
     <!-- Spring Security 5.7.x is API-stable branch that aligns perfectly with Spring 5.3.
@@ -46,13 +25,383 @@
     <slf4j.version>1.7.36</slf4j.version>
     <log4j.version>2.20.0</log4j.version>
     <springdoc-openapi.version>1.8.0</springdoc-openapi.version>
-    <nodejs.version>v24.11.1</nodejs.version>
-    <repo.url.celements>http://maven.celements.ch</repo.url.celements>
   </properties>
-  <dependencies>
-  </dependencies>
   <dependencyManagement>
     <dependencies>
+
+      <!-- Celements -->
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>blog-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>calendar-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-base-tests</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-blog</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-calendar</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-calendar-bankholidays</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-calendar-gdata</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-captcha</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-cleverreach</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-commons</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-component</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-config-source</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-config-source-api</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-contact</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-core</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-course</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-crm-organisation</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-crm-person</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-crm-place</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-css</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-filebase</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-global-redirect</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-image</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-importer</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-invoice</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-invoice-subscription</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-keycloak</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-layout</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-layout-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-loadTests</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-mailsender</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-model</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-observation</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-product</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-reference</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-richtext</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-richtext-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-rights</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-scheduler</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-search</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-servlet</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-shared-tests</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-shared-tests-deprecated</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-spring-mvc</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-spring-security</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-structuredDataEditor</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-subsystem-migration-manager</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-tag</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-tickerCell</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-user-manager</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-user-manager-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-webdav</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-wiki-api</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-wiki-manager</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-wiki-manager-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-xwiki-core</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-xwiki-rendering-api</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-xwiki-velocity</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-xwiki-xml</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>crm-place-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>image-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>payment</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>structuredDataEditor-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tickerCell-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-base</artifactId>
+        <version>3.4.3.2-celRTE-b3-SNAPSHOT</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-base-v4</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-base-v6</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-langs</artifactId>
+        <version>3.4.3.2-celRTE-b3-SNAPSHOT</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-langs-v4</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>tinymce-langs-v6</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
 
       <!-- XWiki -->
       <dependency>
@@ -129,6 +478,21 @@
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-observation-remote</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-observation-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-cache-api</artifactId>
         <version>${xwiki.version}</version>
         <exclusions>
@@ -169,6 +533,69 @@
         <groupId>org.xwiki.platform</groupId>
         <artifactId>xwiki-core-query-manager</artifactId>
         <version>${xwiki.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-configuration-api</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-context</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-model</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-container-api</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-url-api</artifactId>
+          </exclusion>
+        </exclusions>
+      </dependency>
+      <dependency>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-core-url-default</artifactId>
+        <version>${xwiki.version}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-default</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>org.xwiki.platform</groupId>
+            <artifactId>xwiki-core-component-api</artifactId>
+          </exclusion>
+        </exclusions>
       </dependency>
       <dependency>
         <groupId>org.xwiki.platform</groupId>
@@ -392,6 +819,13 @@
       <!-- Spring -->
       <dependency>
         <groupId>org.springframework</groupId>
+        <artifactId>spring-framework-bom</artifactId>
+        <version>${spring.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
       </dependency>
@@ -404,6 +838,60 @@
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-config</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-core</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-web</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-crypto</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-resource-server</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-jose</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.security</groupId>
+        <artifactId>spring-security-oauth2-client</artifactId>
+        <version>${spring.security.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.kafka</groupId>
+        <artifactId>spring-kafka</artifactId>
+        <version>${spring.kafka.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springdoc</groupId>
+        <artifactId>springdoc-openapi-webmvc-core</artifactId>
+        <version>${springdoc-openapi.version}</version>
+      </dependency>
+
+      <!-- Jackson -->
+      <dependency>
+        <groupId>com.fasterxml.jackson</groupId>
+        <artifactId>jackson-bom</artifactId>
+        <version>${jackson.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
       </dependency>
 
       <!-- Storage -->
@@ -523,6 +1011,10 @@
           <exclusion>
             <groupId>jdom</groupId>
             <artifactId>jdom</artifactId>
+          </exclusion>
+          <exclusion>
+            <groupId>net.jcip</groupId>
+            <artifactId>jcip-annotations</artifactId>
           </exclusion>
           <exclusion>
             <groupId>org.glassfish.jaxb</groupId>
@@ -651,6 +1143,11 @@
         <version>3.2.2</version>
       </dependency>
       <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-collections4</artifactId>
+        <version>4.4</version>
+      </dependency>
+      <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
         <version>2.6</version>
@@ -736,6 +1233,11 @@
         <version>3.0.2</version>
       </dependency>
       <dependency>
+        <groupId>net.jcip</groupId>
+        <artifactId>jcip-annotations</artifactId>
+        <version>1.0</version>
+      </dependency>
+      <dependency>
         <!-- A small collection of Stream utilities for Java 8. May be removed in 9+ -->
         <groupId>com.codepoetics</groupId>
         <artifactId>protonpack</artifactId>
@@ -745,6 +1247,16 @@
         <groupId>one.util</groupId>
         <artifactId>streamex</artifactId>
         <version>0.8.4</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.maps</groupId>
+        <artifactId>google-maps-services</artifactId>
+        <version>0.18.1</version>
+      </dependency>
+      <dependency>
+        <groupId>io.swagger.core.v3</groupId>
+        <artifactId>swagger-annotations</artifactId>
+        <version>2.2.49</version>
       </dependency>
 
       <dependency>
@@ -764,6 +1276,11 @@
         <version>2.1.1</version>
       </dependency>
       <dependency>
+        <groupId>javax.xml.bind</groupId>
+        <artifactId>jaxb-api</artifactId>
+        <version>2.3.1</version>
+      </dependency>
+      <dependency>
         <groupId>jakarta.ws.rs</groupId>
         <artifactId>jakarta.ws.rs-api</artifactId>
         <version>3.1.0</version> <!-- 4.0.0 requires JDK 17, therefore fallback to 3.1.0 -->
@@ -773,6 +1290,11 @@
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>3.1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.velocity</groupId>
+        <artifactId>velocity</artifactId>
+        <version>1.7</version>
       </dependency>
       <dependency>
         <groupId>struts</groupId>
@@ -1037,6 +1559,11 @@
         <artifactId>easymock</artifactId>
         <version>5.6.0</version>
       </dependency>
+      <dependency>
+        <groupId>net.bytebuddy</groupId>
+        <artifactId>byte-buddy</artifactId>
+        <version>1.17.5</version>
+      </dependency>
       <!-- Used to mock XWiki class -->
       <dependency>
         <groupId>jmock</groupId>
@@ -1152,348 +1679,4 @@
 
     </dependencies>
   </dependencyManagement>
-  <organization>
-    <name>synventis gmbh</name>
-    <url>https://www.synventis.com</url>
-  </organization>
-  <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-checkstyle-plugin</artifactId>
-          <version>3.6.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-resources-plugin</artifactId>
-          <version>3.4.0</version>
-          <configuration>
-            <encoding>UTF-8</encoding>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-surefire-plugin</artifactId>
-          <version>3.5.4</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>3.4.0</version>
-          <executions>
-            <execution>
-              <id>attach-sources</id>
-              <phase>verify</phase>
-              <goals>
-                <goal>jar-no-fork</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-javadoc-plugin</artifactId>
-          <version>3.12.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>3.1.4</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.5.0</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-war-plugin</artifactId>
-          <version>3.5.1</version>
-          <configuration>
-            <resourceEncoding>UTF-8</resourceEncoding>
-          </configuration>
-        </plugin>
-        <plugin>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>3.3.1</version>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.14.1</version>
-          <configuration>
-            <release>${java.version}</release>
-            <encoding>UTF-8</encoding>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>com.github.eirslett</groupId>
-          <artifactId>frontend-maven-plugin</artifactId>
-          <version>1.15.4</version>
-          <configuration>
-            <installDirectory>target</installDirectory>
-            <workingDirectory>.</workingDirectory>
-            <nodeVersion>${nodejs.version}</nodeVersion>
-          </configuration>
-          <executions>
-            <execution>
-              <id>install node and npm</id>
-              <goals>
-                <goal>install-node-and-npm</goal>
-              </goals>
-              <phase>generate-resources</phase>
-            </execution>
-            <execution>
-              <id>npm install</id>
-              <goals>
-                <goal>npm</goal>
-              </goals>
-              <phase>generate-resources</phase>
-              <configuration>
-                <arguments>install</arguments>
-              </configuration>
-            </execution>
-            <execution>
-              <id>npm build</id>
-              <goals>
-                <goal>npm</goal>
-              </goals>
-              <phase>generate-resources</phase>
-              <configuration>
-                <arguments>run build</arguments>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>com.jarslab.maven</groupId>
-          <artifactId>babel-maven-plugin</artifactId>
-          <version>1.6</version>
-          <dependencies>
-            <dependency>
-              <!-- https://stackoverflow.com/a/75652825 -->
-              <groupId>org.codehaus.plexus</groupId>
-              <artifactId>plexus-utils</artifactId>
-              <version>3.5.1</version>
-            </dependency>
-          </dependencies>
-          <executions>
-            <execution>
-              <id>js-transpile</id>
-              <phase>process-resources</phase>
-              <goals>
-                <goal>babel</goal>
-              </goals>
-              <configuration>
-                <verbose>true</verbose>
-                <threads>3</threads>
-                <encoding>UTF-8</encoding>
-                <babelSrc>
-                  ${project.basedir}/node_modules/@babel/standalone/babel.min.js</babelSrc>
-                <sourceDir>${project.basedir}/src/main/webapp/resources/</sourceDir>
-                <targetDir>
-                  ${project.build.directory}/${project.build.finalName}/resources/</targetDir>
-                <jsIncludes>
-                  <jsInclude>**/*.mjs</jsInclude>
-                </jsIncludes>
-                <jsExcludes>
-                  <jsExclude>dist/**</jsExclude>
-                </jsExcludes>
-                <formatPresets>false</formatPresets>
-                <presets>
-                  ["env", {"modules": false, "targets": {"esmodules": true}}]
-                </presets>
-              </configuration>
-            </execution>
-          </executions>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-enforcer-plugin</artifactId>
-          <version>3.5.0</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>enforce-banned-dependencies</id>
-            <goals>
-              <goal>enforce</goal>
-            </goals>
-            <configuration>
-              <rules>
-                <bannedDependencies>
-                  <excludes>
-                    <exclude>org.xwiki.platform:xwiki-core-velocity</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-rendering-api</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-rendering-xwiki</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-component-api</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-observation-api</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core</exclude>
-                    <exclude>org.xwiki.platform:xwiki-core-xml</exclude>
-                    <exclude>com.xpn.xwiki.platform.plugins:xwiki-plugin-mailsender</exclude>
-                    <exclude>com.xpn.xwiki.platform.plugins:xwiki-plugin-skinx</exclude>
-                    <exclude>commons-logging:commons-logging</exclude>
-                  </excludes>
-                  <message>Direct or transitive dependency on a banned artifact was detected.</message>
-                </bannedDependencies>
-              </rules>
-              <fail>true</fail>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.wagon</groupId>
-        <artifactId>wagon-ssh-external</artifactId>
-        <version>3.5.3</version>
-      </extension>
-    </extensions>
-  </build>
-  <repositories>
-    <repository>
-      <id>xwiki-externals</id>
-      <name>XWiki Maven2 Remote Repository for Third Party Dependencies</name>
-      <url>https://maven.xwiki.org/externals</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>xwiki-releases</id>
-      <name>XWiki Maven2 Remote Repository for Releases</name>
-      <url>https://maven.xwiki.org/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>xwiki-snapshots</id>
-      <name>XWiki Maven2 Remote Repository for Snapshots</name>
-      <url>https://maven.xwiki.org/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>celements-externals</id>
-      <name>Celements Maven2 Remote Repository for Third Party Dependencies</name>
-      <url>${repo.url.celements}/externals</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>celements-releases</id>
-      <name>Celements Maven2 Remote Repository for Releases</name>
-      <url>${repo.url.celements}/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>celements-snapshots</id>
-      <name>Celements Maven2 Remote Repository for Snapshots</name>
-      <url>${repo.url.celements}/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>jboss-thirdparty-releases</id>
-      <name>JBoss Thirdparty Releases</name>
-      <url>
-        https://repository.jboss.org/nexus/content/repositories/thirdparty-releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-  <pluginRepositories>
-    <pluginRepository>
-      <id>xwiki-plugins-externals</id>
-      <name>XWiki Maven2 Plugin Remote Repository for Third Party Plugins</name>
-      <url>https://maven.xwiki.org/externals</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>xwiki-plugins-releases</id>
-      <name>XWiki Maven2 Plugin Remote Repository for Releases</name>
-      <url>https://maven.xwiki.org/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-      <id>xwiki-plugins-snapshots</id>
-      <name>XWiki Maven2 Plugin Remote Repository for Snapshots</name>
-      <url>https://maven.xwiki.org/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
-  <profiles>
-    <profile>
-      <id>disable-java8-doclint</id>
-      <activation>
-        <jdk>[1.8,)</jdk>
-      </activation>
-      <properties>
-        <doclint>none</doclint>
-      </properties>
-    </profile>
-  </profiles>
-  <distributionManagement>
-    <snapshotRepository>
-      <id>celements-snapshot-repository</id>
-      <url>${repo.url.dist.celements}/snapshots</url>
-      <uniqueVersion>true</uniqueVersion>
-    </snapshotRepository>
-    <repository>
-      <id>celements-release-repository</id>
-      <url>${repo.url.dist.celements}/releases</url>
-      <uniqueVersion>true</uniqueVersion>
-    </repository>
-  </distributionManagement>
 </project>
