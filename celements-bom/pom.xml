@@ -898,12 +898,7 @@
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate-core</artifactId>
-        <version>3.3.2.GA</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-annotations</artifactId>
-        <version>3.4.0.GA</version>
+        <version>3.5.6-Final</version>
         <exclusions>
           <exclusion>
             <groupId>commons-collections</groupId>
@@ -913,26 +908,12 @@
             <groupId>dom4j</groupId>
             <artifactId>dom4j</artifactId>
           </exclusion>
-          <exclusion>
-            <groupId>commons-logging</groupId>
-            <artifactId>commons-logging</artifactId>
-          </exclusion>
         </exclusions>
       </dependency>
       <dependency>
         <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-commons-annotations</artifactId>
-        <version>3.3.0.ga</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate-entitymanager</artifactId>
-        <version>3.4.0.GA</version>
-      </dependency>
-      <dependency>
-        <groupId>org.hibernate</groupId>
-        <artifactId>hibernate</artifactId>
-        <version>3.2.6.ga</version>
+        <artifactId>hibernate-annotations</artifactId>
+        <version>3.5.6-Final</version>
         <exclusions>
           <exclusion>
             <groupId>commons-collections</groupId>
@@ -969,7 +950,7 @@
         <artifactId>tika-parsers</artifactId>
         <version>1.28.5</version>
         <exclusions>
-          <!-- exclude asm, it is already included in hibernate -->
+          <!-- exclude asm, it is already included in cglib & hibernate -->
           <exclusion>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
@@ -1580,6 +1561,12 @@
         <groupId>cglib</groupId>
         <artifactId>cglib</artifactId>
         <version>3.3.0</version>
+      </dependency>
+      <dependency>
+        <!-- required by cglib & hibernate -->
+        <groupId>org.ow2.asm</groupId>
+        <artifactId>asm</artifactId>
+        <version>9.10.1</version>
       </dependency>
       <dependency>
         <groupId>jmock</groupId>
