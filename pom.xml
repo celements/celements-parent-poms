@@ -24,14 +24,12 @@
   </organization>
   <distributionManagement>
     <snapshotRepository>
-      <id>celements-snapshot-repository</id>
-      <url>${repo.url.dist.celements}/snapshots</url>
-      <uniqueVersion>true</uniqueVersion>
+      <id>celements-forge</id>
+      <url>${repo.url.dist.celements}</url>
     </snapshotRepository>
     <repository>
-      <id>celements-release-repository</id>
-      <url>${repo.url.dist.celements}/releases</url>
-      <uniqueVersion>true</uniqueVersion>
+      <id>celements-forge</id>
+      <url>${repo.url.dist.celements}</url>
     </repository>
   </distributionManagement>
 </project>
