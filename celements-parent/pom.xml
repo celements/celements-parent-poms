@@ -16,7 +16,6 @@
     <release.version>${project.version}</release.version>
     <java.version>21</java.version>
     <nodejs.version>v24.11.1</nodejs.version>
-    <repo.url.celements>https://maven.celements.ch</repo.url.celements>
     <webapp.surefire.integration.skip>true</webapp.surefire.integration.skip>
   </properties>
   <dependencyManagement>
@@ -300,33 +299,11 @@
       </snapshots>
     </repository>
     <repository>
-      <id>celements-externals</id>
-      <name>Celements Maven2 Remote Repository for Third Party Dependencies</name>
-      <url>${repo.url.celements}/externals</url>
+      <id>celements-forge</id>
+      <name>Celements Maven Repository</name>
+      <url>${repo.url.celements}</url>
       <releases>
         <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>celements-releases</id>
-      <name>Celements Maven2 Remote Repository for Releases</name>
-      <url>${repo.url.celements}/releases</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>celements-snapshots</id>
-      <name>Celements Maven2 Remote Repository for Snapshots</name>
-      <url>${repo.url.celements}/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
       </releases>
       <snapshots>
         <enabled>true</enabled>
