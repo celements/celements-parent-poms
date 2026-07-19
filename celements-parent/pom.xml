@@ -16,6 +16,7 @@
     <release.version>${project.version}</release.version>
     <java.version>21</java.version>
     <nodejs.version>v24.11.1</nodejs.version>
+    <celements.test.jvmArgs></celements.test.jvmArgs>
     <webapp.surefire.integration.skip>true</webapp.surefire.integration.skip>
   </properties>
   <dependencyManagement>
@@ -49,6 +50,10 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>3.5.4</version>
+          <configuration>
+            <argLine>${celements.test.jvmArgs}</argLine>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          </configuration>
           <executions>
             <execution>
               <phase>integration-test</phase>
@@ -358,6 +363,17 @@
     </pluginRepository>
   </pluginRepositories>
   <profiles>
+    <profile>
+      <id>jdk24-test-args</id>
+      <activation>
+        <jdk>[24,)</jdk>
+      </activation>
+      <properties>
+        <celements.test.jvmArgs>
+          --sun-misc-unsafe-memory-access=allow
+        </celements.test.jvmArgs>
+      </properties>
+    </profile>
     <profile>
       <id>disable-java8-doclint</id>
       <activation>
