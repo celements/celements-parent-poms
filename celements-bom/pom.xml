@@ -147,11 +147,6 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
-        <artifactId>celements-importer</artifactId>
-        <version>${release.version}</version>
-      </dependency>
-      <dependency>
-        <groupId>com.celements</groupId>
         <artifactId>celements-invoice</artifactId>
         <version>${release.version}</version>
       </dependency>
