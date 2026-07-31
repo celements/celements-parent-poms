@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.celements</groupId>
     <artifactId>celements-parent-poms</artifactId>
-    <version>7.1-SNAPSHOT</version>
+    <version>7.1-RC1</version>
   </parent>
   <artifactId>celements-parent</artifactId>
-  <version>7.1-SNAPSHOT</version>
+  <version>7.1-RC1</version>
   <packaging>pom</packaging>
   <description>Celements parent POM</description>
   <properties>
     <release.version>${project.version}</release.version>
     <java.version>21</java.version>
     <nodejs.version>v24.11.1</nodejs.version>
-    <celements.test.jvmArgs></celements.test.jvmArgs>
+    <celements.test.jvmArgs />
     <webapp.surefire.integration.skip>true</webapp.surefire.integration.skip>
   </properties>
   <dependencyManagement>
