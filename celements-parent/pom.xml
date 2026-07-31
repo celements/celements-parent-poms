@@ -22,7 +22,7 @@
       <dependency>
         <groupId>com.celements</groupId>
         <artifactId>celements-bom</artifactId>
-        <version>${project.version}</version>
+        <version>${release.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
