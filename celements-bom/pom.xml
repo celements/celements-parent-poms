@@ -280,6 +280,17 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
+        <artifactId>celements-messages</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-messages-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
         <artifactId>celements-web</artifactId>
         <version>${release.version}</version>
         <type>war</type>
