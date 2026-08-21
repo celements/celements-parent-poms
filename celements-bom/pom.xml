@@ -188,6 +188,11 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
+        <artifactId>celements-navigation-rest</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
         <artifactId>celements-observation</artifactId>
         <version>${release.version}</version>
       </dependency>
