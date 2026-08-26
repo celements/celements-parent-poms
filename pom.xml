@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.celements</groupId>
   <artifactId>celements-parent-poms</artifactId>
-  <version>7.2</version>
+  <version>7.3-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Celements parent POM aggregator</description>
   <modules>
@@ -14,7 +14,7 @@
     <connection>scm:git:git://github.com/celements/parent-poms</connection>
     <developerConnection>scm:git:git@github.com:celements/parent-poms.git</developerConnection>
     <url>https://github.com/celements/parent-poms</url>
-    <tag>celements-parent-poms-7.2</tag>
+    <tag>HEAD</tag>
   </scm>
   <organization>
     <name>synventis gmbh</name>
