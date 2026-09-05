@@ -173,6 +173,17 @@
       </dependency>
       <dependency>
         <groupId>com.celements</groupId>
+        <artifactId>celements-presentation</artifactId>
+        <version>${release.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
+        <artifactId>celements-presentation-web</artifactId>
+        <version>${release.version}</version>
+        <type>war</type>
+      </dependency>
+      <dependency>
+        <groupId>com.celements</groupId>
         <artifactId>celements-loadTests</artifactId>
         <version>${release.version}</version>
       </dependency>
